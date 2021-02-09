@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="https://sudo-code7.github.io/css/bootstrap.css">
+<title>Amazon Sagemaker Built-in Algorithms Compared | sudo-code</title>
+
+<meta name="keywords" content="machine, learning, sagemaker, aws, mls-c01, specialty, exam, algorithms, compared" />
+<meta name="description" content="Compare various built-in algorithms in Sagemaker">
+<meta name="author" content="sudo-code">
+<link rel="canonical" href="https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/" />
+<link href="/assets/css/stylesheet.min.fce0505b5d52cf8fb86c00ba46ef2e967fadbf34d2ba108809fb5ccf550a5ed6.css" integrity="sha256-/OBQW11Sz4&#43;4bAC6Ru8uln&#43;tvzTSuhCICftcz1UKXtY=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://sudo-code7.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sudo-code7.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sudo-code7.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sudo-code7.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sudo-code7.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-189302888-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="Amazon Sagemaker Built-in Algorithms Compared" />
+<meta property="og:description" content="Compare various built-in algorithms in Sagemaker" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/" />
+<meta property="og:image" content="https://sudo-code7.github.io/mls-c01/assets/images/general/aws-cert-back.png" /><meta property="article:published_time" content="2020-09-15T11:30:03+00:00" />
+<meta property="article:modified_time" content="2020-09-15T11:30:03+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://sudo-code7.github.io/mls-c01/assets/images/general/aws-cert-back.png" />
+<meta name="twitter:title" content="Amazon Sagemaker Built-in Algorithms Compared"/>
+<meta name="twitter:description" content="Compare various built-in algorithms in Sagemaker"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Amazon Sagemaker Built-in Algorithms Compared",
+  "name": "Amazon Sagemaker Built-in Algorithms Compared",
+  "description": "Ready reference for MLS-C01: Sagemaker Algorithms Compared  Study following table to compare various built-in algorithms in Sagemaker You can use this as a ready reckoner for …",
+  "keywords": [
+    "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "algorithms", "compared"
+  ],
+  "articleBody": "Ready reference for MLS-C01: Sagemaker Algorithms Compared  Study following table to compare various built-in algorithms in Sagemaker You can use this as a ready reckoner for MLS-C01 AWS Certified Machine Learning Specialty Exam Pay attention: Scroll the table horizontally for more columns Download the table as PDF here   Algorithm Algo. Type Input Format INT/FLOAT Processor Type Instance Multiprocessor\nin Single Machine Multi Machine Use Cases Comments HP     Linear Learner SUPERVISED • RecordIO Wrapped Protobuf / CSV\n• Float32 Data only\n FLOAT32 CPU\nGPU Any CPU\nGPU Only CPU\nNo GPU • Regression and classification\n• Classification: Binary or multiclass • Need data to be normalized else algo may not converge\n• Multiple models are trained in parallel balance_multiclass_weights\nlearning_rate\nmini_batch_Size\nL1, L2   XGBoost SUPERVISED • CSV or LibSVM (not AWS algo, but adapted, hence NO RecordIO-protobuf) - CPU M4 - No • Regression and classification\n• Classification: Binary or multiclass • Output model as pickle\n• Uses extreme boosting of trees\n• Algo is memory bound, not much compute • subsample_trees (less overfitting)\n• eta (eq. to learning rate)\n• alpha, gamma, lambda (conservative trees for higher values)   Seq2Seq SUPERVISED • RecordIO-Protobuf INT GPU P3 GPU No • Machine translation\n• Text summarization\n• Speech to text\n• Any use case where input a sequence and output is a sequence • Along with training data and validation data files, must provide vocabulary files – in case of text seq2seq\n• Start with tokenized text files, then convert to RecordIO-Protobuf\n• Uses RNNs and CNNs internally • batch_size\n• optimizer\n• learning_rate\n• num_layers_encoder\n• num_layers_decoder\n• can optimize on: accuracy, BLEU score (mach. translation), perplexity\n   DeepAR SUPERVISED • JSON Lines\n• GZIP\n• Parquet\n-- Each record to contain\n- Start: starting TS\n- Target: the TS values to learn/predict - CPU\nGPU C4\nP3 CPU\nGPU CPU\nGPU • Stock price prediction\n• Sales and promotion effectiveness\n• Any time oriented forecasting, single dimension • Uses RNNs\n• Can train several related timeseries, more series the better results, learns relationships b/w timeseries\n• Start with CPU (C4.2xlarge, or higher), if necessary, move to GPU. Only large models need GPU • context_length (number of time points back in time the model learns)\n• epochs, batch_size, learning_rate, num_cells   Blazing Text - Text Classification SUPERVISED Augmented manifest text format –\n\"__label__1 this is a sentence with , punctuations also tokenized . that is space delimited . One sentence per line . label at the start\" - CPU\nGPU size 2GB: P2, P3 Single GPU No • web search and information retrieval • predict labels for sentence • epochs\n• learning_rate\n• word_ngrams\n• vector_dim   Blazing Text - Word2Vec UNSUPERVISED Word2Vec\none sentence per line\n - CPU\nGPU P3 CPU/GPU: CBOW \u0026 Skip Gram GPU: Batch skip gram\nCPU: No • Preparing input for NLP use cases\n• Vectorization of text for machine translation and sentiment analysis\n• Semantic similarity of words • Represents words as vectors\n• Semantically similar words are represented by vectors close to each other\n• Semantic – of or relating to meaning in language\nMULTIPLE MODES:\n• CBOW - Continuous Bag of Words - Order of words DO NOT matter\n• Skip Gram i.e. n-gram - order of words matter\n• Batch skip gram - order of words matter\n • mode: mandatory\n• learning_rate\n• window_size\n• vector_dim\n• negative_Samples   Object2Vec  • Any object to be tokenized into integers\n• Training data:\n- pairs of tokens\n- sequence of tokens INT CPU\nGPU M5, P2 Single machine No • Collaborative recommendation system\n• Multi-label document classification system\n• Sentence Embeddings\n• Learns relations or associations:\n- sen to sen\n- labels to seq (genre to description)\n- product to product (recommendation)\n- user to item (recommendation) • CNNs and RNNs used\n• Encoders used in input\n- uses 2 encoders in parallel\n- learns associations b/w encoders, using a comparator\nEncoder types:\n• Hierchical CNNs (hCNNs)\n• bi-lstm\n• pooled_embedding\n dropout, early_stopping_ epochs, learning_rate, batch_size, layers, act. func., optimizer, weight_decay   Object Detection SUPERVISED RecordIO (NOT Protobuf) or Images (JPEG or PNG)\n+\nWith image manifest in JSON, one JSON per image\nthat contains annotations\n - GPU P2, P3 Yes Yes • Detect objects in an image\n• Object tracking • Uses CNN with SSD\n• Transfer learning/incremental learning supported\n• Uses FLIP, RESCALE, JITTER internally to avoid overfitting\n• CPUs can be used for inference, not for training Standard CNN HPs like: learning_rate, batch size, optimizer etc.   Image Classification SUPERVISED • Pipe: Apache MxNET RecordIO (NOT Protobuf) - for interoperability with other DNN frameworks\n• File Mode: Raw JPEG/PNG + *.LST files - associates image index, class label, path to image\n-- To use images directly in Pipe mode use JSON based Augmented Manifest Format - GPU P2, P3 Yes Yes • classify images into multiple classes\n• dog/cat/rat/tiger etc. • Full training: ResNet CNN is used. N/W initialized with random weights\n• Transfer Learning/Pre-trained: Image Net is used. Initialized with pre trained weights. Only Top FC layer is initialized with random weights.\n• CPU can be used for inference, if not suitable, move to GPU • batch_size\n• learning_rate\n• optimizer, B1, B2, eps, Gamma   Semantic Segmentation SUPERVISED • Raw JPEG/PNG in file mode + annotations\n• Add Augmented Manifest Format for Pipe Mode - GPU P2, P3 Yes No • Self driving cars\n• Medical imaging and diagnostics\n• Robot sensing\n• Given a pixel - what object does it belong to ? • Algo under hood: Gluon CV of MxNET = FC + Pyramid Scene Pairing + DeepLabV3\n• Arch: ResNet50/ResNet101 = “Backbone” selection in HP\n• Trained on ImageNet data\n• Incremental/Transfer learning allowed\n• Inference can use CPU or GPU\nEach of the three algorithms has two distinct components:\n• The backbone (or encoder)—A network that produces reliable activation maps of features.\n• The decoder—A network that constructs the segmentation mask from the encoded activation maps.\nThe segmentation output is represented as a grayscale image, called a segmentation mask. A segmentation mask is a grayscale image with the same shape as the input image. epochs, learning_rate, batch size, algo, backbone   Random Cut Forest UNSUPERVISED • RecordIO-Protobuf\n• CSV - CPU M4,C4,C5 - No • Anomaly detection\n• Detect unexpected spikes in TS data\n• Few people have tried using this for fraud detection • Assigns anomaly score to each data point\n• Uses forest of trees\n• Looks at expected change in complexity as a result of adding a point to a tree\n• Random sampling\n• RCF is used in Kinesis Analytics in real time num_trees, num_samples_per_tree (= choose inversely proportional to ratio #anomalous/#normal in dataset)\n   Neural Topic Modelling UNSUPERVISED • RecordIO-Protobuf\n• CSV\n- Words must be tokenized to integers\n- aux channel for vocab INT GPU P2, P3 -  • Organize docs into topics\n• Summarize docs based on topics • Algo: Neural Variational Inference\n• Define how many topics to group docs into\n• Used only on text\n• CPU / GPU for inference num_topics\nmini_batch_size\nlearning_rate\nvariation_loss (at expence of learing time)   LDA (Latent Dirichlet Allocation) UNSUPERVISED • RecordIO-Protobuf (Pipe Mode)\n• CSV\n- Words must be tokenized to integers\n- aux channel for vocab - CPU M4 No No • Cluster customers based on purchases\n• Harmonic analysis in music • Algo: LDA - Open source availability, not DNN\n• Can process more than text, like harmonic music analysis\n• Single inst. CPU\n num_topics\nalpha0 = small values - sparse topic mixtures, 1 uniform topic mixture   kNN (k Nearest Neighbors) SUPERVISED • RecordIO-protobuf\n• CSV\n-- File or pipe mode both\n- first column has label - CPU\nGPU - - - • Classification and regression • Sagemaker automates 3 steps:\n- Sample data (can’t use for huge data)\n- Dim reduction (sign or nfjlt methods)\n- Build index for looking up neighbours k\nsample_size   K-Means UNSUPERVISED • RecordIO-protobuf\n• CSV\n-- File or pipe mode both - CPU (recommended)\nGPU M4, M5, C4, C5 - - • Cluster data - unsupervised\n• Find groups of data points based on similarity • Webscale K-Means in Sagemaker\n• Similarity measured by euclidean distance\n• Works to optimize the centers of eack of the k-clusters\n• Algorithm:\n1) Determine init. cluster centers = 2 ways: k-means++ (tries to make initial clusters far apart) OR random\n2) Iterate over data and calculate cluster center\n3) Reduce from K to k - using Lloyd’s method or k-means++\nK comes from “extra_cluster_centers” which improves accuracy, but later reduced to k.\nK = k • x • K\n• mini_batch_size\n• extra_center_factor (x)\n• init_method (k-means++ OR random)   PCA - Principal Component Analysis UNSUPERVISED • RecordIO-protobuf\n• CSV\n-- File or pipe mode both - CPU\nGPU - - - • Dimensionality Reduction\n• Removes Curse of Dimensionality • Reduced Dimensions are called components\n• 1st component - largest possible variaility, next 2nd component, so on ..\n• Used Singular Value Decomposition (SVD)\n• Two Modes:\n- Regular: Sparse data. modelate #features, #rows\n- Randomized: Dense data. #large data, #large features, uses approximation algos • algorithm_mode (regular, random\n• subtract_mean: unbiases data   Factorization Machines SUPERVISED • RecordIO-Protobuf FLOAT32 CPU (recommended)\nGPU - - - • Regression, Classification, recommendation - all in one general purpose algo for sparse data\n• Click prediction\n• Item recommendation • Limited to pairwise interaction - 2nd order\ne.g. user to item interactions\n• CSV not practical hence not supported,a s data is sparse\n*GPU not recommented as data is sparse, GPU works better on dense data • Initialization methods for bias, factors and linear terms\n- methods: uniform, normal or const\n- can tune properties of each method   IP Insights UNSUPERVISED • CSV only for training\n• Inference: JSON lines, CSV, JSON - CPU\nGPU (recommended) - Multi GPU - • Identify suspicious IP addresses in context of security\n• Logins from anomalous IPs\n• Identify accounts creating resources from anamolous IPs • Only IPv4 supported\n• Uses NN to learn latent vector rep. of entities and IP addresses\n• entities are hashed and embedded - large hash size\n• Automatically generates anomalous data by randomly pairing entities and IPs - as data will be highly imbalanced • num_entity_vectors (hash size, set to twice the unique entity identifiers)\n• vector_dim (size of embedding vectors, scales model size)\n• Others: epoch, batch_size, leraning_rate, etc.   Reinforcement Learning REINFORCEMENT LEARNING • Nothing specific to Sagemaker - GPU GPU Yes Yes - Multi Instance GPU recommended • Games\n• Supply chain management\n• HVAC Systems\n• Industrial robotics\n• Dialog systems\n• Autonomous vehicles • Supports Intel coach, Ray RLLib\n• Tensorflow, MxNET\n• Custom, commercial and opensource environments supported - Matlab simulink, energy plus, robo school, pybullet, Amazon Sumerian, AWS Robomaker • Depends on framework and algo used, nothing tied to Sagemaker     Algorithms categorized by feature  Mandatory FLOAT32 Mandatory INT32 CPU ONLY GPU Only Incremental Training Available     Linear Learner Seq2Seq XGBoost Seq2Seq Image Classification   Factorization Machines Object2Vec RCF Image Classification Semantic Segmentation    NTM LDA Semantic Segmentation Object Detection      Object Detection       NTM       Reinforcement Learning      Algorithms that support distributed training  Mnemonic to remember: F-SKILBDR as in SkillBuilder (If you can come up with somethig better, please share in comments! )   Distributed Training Support     Factorization Machine   Seq2Seq   K-Means   IP Insights   Linear Learner (Not LDA)   Blazing Text - Word2Vec   DeepAR   RCF - Random Cut Forests     ",
+  "wordCount" : "1905",
+  "inLanguage": "en",
+  "image":"https://sudo-code7.github.io/mls-c01/assets/images/general/aws-cert-back.png","datePublished": "2020-09-15T11:30:03Z",
+  "dateModified": "2020-09-15T11:30:03Z",
+  "author":{
+    "@type": "Person",
+    "name": "sudo-code"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "sudo-code",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sudo-code7.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sudo-code7.github.io/" accesskey="h" title="sudo-code (Alt + H)">sudo-code</a>
+            <span class="logo-switches">
+                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </a>
+                
+                
+            </span>
+        </div>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://sudo-code7.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sudo-code7.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sudo-code7.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sudo-code7.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs">
+
+      <a href="https://sudo-code7.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://sudo-code7.github.io/posts/">Posts</a>
+    </div>
+    <h1 class="post-title">
+      Amazon Sagemaker Built-in Algorithms Compared
+    </h1>
+    <div class="post-description">
+      Compare various built-in algorithms in Sagemaker
+    </div>
+    <div class="post-meta">
+
+September 15, 2020&nbsp;·&nbsp;9 min&nbsp;·&nbsp;sudo-code
+
+    </div>
+  </header> 
+
+  <div class="toc">
+    <details  open>
+      <summary accesskey="c" title="(Alt + C)">
+        <div class="details">Table of Contents</div>
+      </summary>
+      <div class="inner"><ul><li>
+        <a href="#ready-reference-for-mls-c01-sagemaker-algorithms-compared" aria-label="Ready reference for MLS-C01: Sagemaker Algorithms Compared">Ready reference for MLS-C01: Sagemaker Algorithms Compared</a></li><li>
+        <a href="#algorithms-categorized-by-feature" aria-label="Algorithms categorized by feature">Algorithms categorized by feature</a></li><li>
+        <a href="#algorithms-that-support-distributed-training" aria-label="Algorithms that support distributed training">Algorithms that support distributed training</a></li></ul>
+      </div>
+    </details>
+  </div>
+  <div class="post-content">
+<p><img src="/mls-c01/assets/images/general/aws-cert-back.png#center" alt="Cover"></p>
+<h1 id="ready-reference-for-mls-c01-sagemaker-algorithms-compared">Ready reference for MLS-C01: Sagemaker Algorithms Compared<a hidden class="anchor" aria-hidden="true" href="#ready-reference-for-mls-c01-sagemaker-algorithms-compared">#</a></h1>
+<ul>
+<li>Study following table to compare various built-in algorithms in Sagemaker</li>
+<li>You can use this as a ready reckoner for MLS-C01 AWS Certified Machine Learning Specialty Exam</li>
+<li>Pay attention: Scroll the table horizontally for more columns</li>
+<li>Download the table as PDF <a href="/mls-c01/assets/data/AWS-SM-Built-in-Algos-Compared.pdf">here</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="table table-dark table-striped table-bordered">
+<thead class="thead-dark">
+<tr>
+<th>Algorithm</th>
+<th>Algo. Type</th>
+<th>Input Format</th>
+<th>INT/FLOAT</th>
+<th>Processor Type</th>
+<th>Instance</th>
+<th>Multiprocessor<br>in Single Machine</th>
+<th>Multi Machine</th>
+<th>Use Cases</th>
+<th>Comments</th>
+<th>HP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear Learner</td>
+<td>SUPERVISED</td>
+<td>• RecordIO Wrapped Protobuf / CSV<br>• Float32 Data only<br></td>
+<td>FLOAT32</td>
+<td>CPU<br>GPU</td>
+<td>Any</td>
+<td>CPU<br>GPU</td>
+<td>Only CPU<br>No GPU</td>
+<td>• Regression and classification<br>• Classification: Binary or multiclass</td>
+<td>• Need data to be normalized else algo may not converge<br>• Multiple models are trained in parallel</td>
+<td>balance_multiclass_weights<br>learning_rate<br>mini_batch_Size<br>L1, L2</td>
+</tr>
+<tr>
+<td>XGBoost</td>
+<td>SUPERVISED</td>
+<td>• CSV or LibSVM (not AWS algo, but adapted, hence NO RecordIO-protobuf)</td>
+<td>-</td>
+<td>CPU</td>
+<td>M4</td>
+<td>-</td>
+<td>No</td>
+<td>• Regression and classification<br>• Classification: Binary or multiclass</td>
+<td>• Output model as pickle<br>• Uses extreme boosting of trees<br>• Algo is memory bound, not much compute</td>
+<td>• subsample_trees (less overfitting)<br>• eta (eq. to learning rate)<br>• alpha, gamma, lambda (conservative trees for higher values)</td>
+</tr>
+<tr>
+<td>Seq2Seq</td>
+<td>SUPERVISED</td>
+<td>• RecordIO-Protobuf</td>
+<td>INT</td>
+<td>GPU</td>
+<td>P3</td>
+<td>GPU</td>
+<td>No</td>
+<td>• Machine translation<br>• Text summarization<br>• Speech to text<br>• Any use case where input a sequence and output is a sequence</td>
+<td>• Along with training data and validation data files, must provide vocabulary files &ndash; in case of text seq2seq<br>• Start with tokenized text files, then convert to RecordIO-Protobuf<br>• Uses RNNs and CNNs internally</td>
+<td>• batch_size<br>• optimizer<br>• learning_rate<br>• num_layers_encoder<br>• num_layers_decoder<br>• can optimize on: accuracy, BLEU score  (mach. translation), perplexity<br></td>
+</tr>
+<tr>
+<td>DeepAR</td>
+<td>SUPERVISED</td>
+<td>• JSON Lines<br>• GZIP<br>• Parquet<br><br>-- Each record to contain<br>- Start: starting TS<br>- Target: the TS values to learn/predict</td>
+<td>-</td>
+<td>CPU<br>GPU</td>
+<td>C4<br>P3</td>
+<td>CPU<br>GPU</td>
+<td>CPU<br>GPU</td>
+<td>• Stock price prediction<br>• Sales and promotion effectiveness<br>• Any time oriented forecasting, single dimension</td>
+<td>• Uses RNNs<br>• Can train several related timeseries, more series the better results, learns relationships b/w timeseries<br>• Start with CPU (C4.2xlarge, or higher), if necessary, move to GPU. Only large models need GPU</td>
+<td>• context_length (number of time points back in time the model learns)<br>• epochs, batch_size, learning_rate, num_cells</td>
+</tr>
+<tr>
+<td>Blazing Text - Text Classification</td>
+<td>SUPERVISED</td>
+<td>Augmented manifest text format &ndash;<br>&quot;__label__1 this is a sentence with , punctuations also tokenized . that is space delimited . One sentence per line . label at the start&quot;</td>
+<td>-</td>
+<td>CPU<br>GPU</td>
+<td>size &lt; 2GB: C5<br>size &gt; 2GB: P2, P3</td>
+<td>Single GPU</td>
+<td>No</td>
+<td>• web search and information retrieval</td>
+<td>• predict labels for sentence</td>
+<td>• epochs<br>• learning_rate<br>• word_ngrams<br>• vector_dim</td>
+</tr>
+<tr>
+<td>Blazing Text - Word2Vec</td>
+<td>UNSUPERVISED</td>
+<td>Word2Vec<br>one sentence per line<br></td>
+<td>-</td>
+<td>CPU<br>GPU</td>
+<td>P3</td>
+<td>CPU/GPU: CBOW &amp; Skip Gram</td>
+<td>GPU: Batch skip gram<br>CPU: No</td>
+<td>• Preparing input for NLP use cases<br>• Vectorization of text for machine translation and sentiment analysis<br>• Semantic similarity of words</td>
+<td>• Represents words as vectors<br>• Semantically similar words are represented by vectors close to each other<br>• Semantic &ndash; of or relating to meaning in language<br><br>MULTIPLE MODES:<br>• CBOW - Continuous Bag of Words - Order of words DO NOT matter<br>• Skip Gram i.e. n-gram - order of words matter<br>• Batch skip gram - order of words matter<br></td>
+<td>• mode: mandatory<br>• learning_rate<br>• window_size<br>• vector_dim<br>• negative_Samples</td>
+</tr>
+<tr>
+<td>Object2Vec</td>
+<td></td>
+<td>• Any object to be tokenized into integers<br>• Training data:<br>- pairs of tokens<br>- sequence of tokens</td>
+<td>INT</td>
+<td>CPU<br>GPU</td>
+<td>M5, P2</td>
+<td>Single machine</td>
+<td>No</td>
+<td>• Collaborative recommendation system<br>• Multi-label document classification system<br>• Sentence Embeddings<br>• Learns relations or associations:<br>- sen to sen<br>- labels to seq (genre to description)<br>- product to product (recommendation)<br>- user to item (recommendation)</td>
+<td>• CNNs and RNNs used<br>• Encoders used in input<br>- uses 2 encoders in parallel<br>- learns associations b/w encoders, using a comparator<br><br>Encoder types:<br>• Hierchical CNNs (hCNNs)<br>• bi-lstm<br>• pooled_embedding<br></td>
+<td>dropout, early_stopping_ epochs, learning_rate, batch_size, layers, act. func., optimizer, weight_decay</td>
+</tr>
+<tr>
+<td>Object Detection</td>
+<td>SUPERVISED</td>
+<td>RecordIO (NOT Protobuf) or Images (JPEG or PNG)<br>+<br>With image manifest in JSON, one JSON per image<br>that contains annotations<br></td>
+<td>-</td>
+<td>GPU</td>
+<td>P2, P3</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>• Detect objects in an image<br>• Object tracking</td>
+<td>• Uses CNN with SSD<br>• Transfer learning/incremental learning supported<br>• Uses FLIP, RESCALE, JITTER internally to avoid overfitting<br>• CPUs can be used for inference, not for training</td>
+<td>Standard CNN HPs like: learning_rate, batch size, optimizer etc.</td>
+</tr>
+<tr>
+<td>Image Classification</td>
+<td>SUPERVISED</td>
+<td>• Pipe: Apache MxNET RecordIO (NOT Protobuf) - for interoperability with other DNN frameworks<br>• File Mode: Raw JPEG/PNG + *.LST files - associates image index, class label, path to image<br>-- To use images directly in Pipe mode use JSON based Augmented Manifest Format</td>
+<td>-</td>
+<td>GPU</td>
+<td>P2, P3</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>• classify images into multiple classes<br>• dog/cat/rat/tiger etc.</td>
+<td>• Full training: ResNet CNN is used. N/W initialized with random weights<br>• Transfer Learning/Pre-trained: Image Net is used. Initialized with pre trained weights. Only Top FC layer is initialized with random weights.<br><br>• CPU can be used for inference, if not suitable, move to GPU</td>
+<td>• batch_size<br>• learning_rate<br>• optimizer, B1, B2, eps, Gamma</td>
+</tr>
+<tr>
+<td>Semantic Segmentation</td>
+<td>SUPERVISED</td>
+<td>• Raw JPEG/PNG in file mode + annotations<br>• Add Augmented Manifest Format for Pipe Mode</td>
+<td>-</td>
+<td>GPU</td>
+<td>P2, P3</td>
+<td>Yes</td>
+<td>No</td>
+<td>• Self driving cars<br>• Medical imaging and diagnostics<br>• Robot sensing<br>• Given a pixel - what object does it belong to ?</td>
+<td>• Algo under hood: Gluon CV of MxNET = FC + Pyramid Scene Pairing + DeepLabV3<br>• Arch: ResNet50/ResNet101 = &ldquo;Backbone&rdquo; selection in HP<br>• Trained on ImageNet data<br>• Incremental/Transfer learning allowed<br>• Inference can use CPU or GPU<br><br>Each of the three algorithms has two distinct components:<br>• The backbone (or encoder)—A network that produces reliable activation maps of features.<br>• The decoder—A network that constructs the segmentation mask from the encoded activation maps.<br><br>The segmentation output is represented as a grayscale image, called a segmentation mask. A segmentation mask is a grayscale image with the same shape as the input image.</td>
+<td>epochs, learning_rate, batch size, algo, backbone</td>
+</tr>
+<tr>
+<td>Random Cut Forest</td>
+<td>UNSUPERVISED</td>
+<td>• RecordIO-Protobuf<br>• CSV</td>
+<td>-</td>
+<td>CPU</td>
+<td>M4,C4,C5</td>
+<td>-</td>
+<td>No</td>
+<td>• Anomaly detection<br>• Detect unexpected spikes in TS data<br>• Few people have tried using this for fraud detection</td>
+<td>• Assigns anomaly score to each data point<br>• Uses forest of trees<br>• Looks at expected change in complexity as a result of adding a point to a tree<br>• Random sampling<br>• RCF is used in Kinesis Analytics in real time</td>
+<td>num_trees, num_samples_per_tree (= choose inversely proportional to ratio #anomalous/#normal in dataset)<br><br></td>
+</tr>
+<tr>
+<td>Neural Topic Modelling</td>
+<td>UNSUPERVISED</td>
+<td>• RecordIO-Protobuf<br>• CSV<br><br>- Words must be tokenized to integers<br>- aux channel for vocab</td>
+<td>INT</td>
+<td>GPU</td>
+<td>P2, P3</td>
+<td>-</td>
+<td></td>
+<td>• Organize docs into topics<br>• Summarize docs based on topics</td>
+<td>• Algo: Neural Variational Inference<br>• Define how many topics to group docs into<br>• Used only on text<br>• CPU / GPU for inference</td>
+<td>num_topics<br>mini_batch_size<br>learning_rate<br>variation_loss (at expence of learing time)</td>
+</tr>
+<tr>
+<td>LDA (Latent Dirichlet Allocation)</td>
+<td>UNSUPERVISED</td>
+<td>• RecordIO-Protobuf (Pipe Mode)<br>• CSV<br><br>- Words must be tokenized to integers<br>- aux channel for vocab</td>
+<td>-</td>
+<td>CPU</td>
+<td>M4</td>
+<td>No</td>
+<td>No</td>
+<td>• Cluster customers based on purchases<br>• Harmonic analysis in music</td>
+<td>• Algo: LDA - Open source availability, not DNN<br>• Can process more than text, like harmonic music analysis<br>• Single inst. CPU<br></td>
+<td>num_topics<br>alpha0 = small values - sparse topic mixtures, &gt;1 uniform topic mixture</td>
+</tr>
+<tr>
+<td>kNN (k Nearest Neighbors)</td>
+<td>SUPERVISED</td>
+<td>• RecordIO-protobuf<br>• CSV<br>-- File or pipe mode both<br>- first column has label</td>
+<td>-</td>
+<td>CPU<br>GPU</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>• Classification and regression</td>
+<td>• Sagemaker automates 3 steps:<br>- Sample data (can&rsquo;t use for huge data)<br>- Dim reduction (sign or nfjlt methods)<br>- Build index for looking up neighbours</td>
+<td>k<br>sample_size</td>
+</tr>
+<tr>
+<td>K-Means</td>
+<td>UNSUPERVISED</td>
+<td>• RecordIO-protobuf<br>• CSV<br>-- File or pipe mode both</td>
+<td>-</td>
+<td>CPU (recommended)<br>GPU</td>
+<td>M4, M5, C4, C5</td>
+<td>-</td>
+<td>-</td>
+<td>• Cluster data - unsupervised<br>• Find groups of data points based on similarity</td>
+<td>• Webscale K-Means in Sagemaker<br>• Similarity measured by euclidean distance<br>• Works to optimize the centers of eack of the k-clusters<br>• Algorithm:<br>1) Determine init. cluster centers = 2 ways: k-means++ (tries to make initial clusters far apart) OR random<br>2) Iterate over data and calculate cluster center<br>3) Reduce from K to k - using Lloyd&rsquo;s method or k-means++<br><br>K comes from &ldquo;extra_cluster_centers&rdquo; which improves accuracy, but later reduced to k.<br>K = k • x</td>
+<td>• K<br>• mini_batch_size<br>• extra_center_factor (x)<br>• init_method (k-means++ OR random)</td>
+</tr>
+<tr>
+<td>PCA - Principal Component Analysis</td>
+<td>UNSUPERVISED</td>
+<td>• RecordIO-protobuf<br>• CSV<br>-- File or pipe mode both</td>
+<td>-</td>
+<td>CPU<br>GPU</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>• Dimensionality Reduction<br>• Removes Curse of Dimensionality</td>
+<td>• Reduced Dimensions are called components<br>• 1st component - largest possible variaility, next 2nd component, so on ..<br>• Used Singular Value Decomposition (SVD)<br>• Two Modes:<br>- Regular: Sparse data. modelate #features, #rows<br>- Randomized: Dense data. #large data, #large features, uses approximation algos</td>
+<td>• algorithm_mode (regular, random<br>• subtract_mean: unbiases data</td>
+</tr>
+<tr>
+<td>Factorization Machines</td>
+<td>SUPERVISED</td>
+<td>• RecordIO-Protobuf</td>
+<td>FLOAT32</td>
+<td>CPU (recommended)<br>GPU</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>• Regression, Classification, recommendation - all in one general purpose algo for sparse data<br>• Click prediction<br>• Item recommendation</td>
+<td>• Limited to pairwise interaction - 2nd order<br>e.g. user to item interactions<br>• CSV not practical hence not supported,a s data is sparse<br>*GPU not recommented as data is sparse, GPU works better on dense data</td>
+<td>• Initialization methods for bias, factors and linear terms<br>- methods: uniform, normal or const<br>- can tune properties of each method</td>
+</tr>
+<tr>
+<td>IP Insights</td>
+<td>UNSUPERVISED</td>
+<td>• CSV only for training<br>• Inference: JSON lines, CSV, JSON</td>
+<td>-</td>
+<td>CPU<br>GPU (recommended)</td>
+<td>-</td>
+<td>Multi GPU</td>
+<td>-</td>
+<td>• Identify suspicious IP addresses in context of security<br>• Logins from anomalous IPs<br>• Identify accounts creating resources from anamolous IPs</td>
+<td>• Only IPv4 supported<br>• Uses NN to learn latent vector rep. of entities and IP addresses<br>• entities are hashed and embedded - large hash size<br>• Automatically generates anomalous data by randomly pairing entities and IPs - as data will be highly imbalanced</td>
+<td>• num_entity_vectors (hash size, set to twice the unique entity identifiers)<br>• vector_dim (size of embedding vectors, scales model size)<br>• Others: epoch, batch_size, leraning_rate, etc.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>REINFORCEMENT LEARNING</td>
+<td>• Nothing specific to Sagemaker</td>
+<td>-</td>
+<td>GPU</td>
+<td>GPU</td>
+<td>Yes</td>
+<td>Yes - Multi Instance GPU recommended</td>
+<td>• Games<br>• Supply chain management<br>• HVAC Systems<br>• Industrial robotics<br>• Dialog systems<br>• Autonomous vehicles</td>
+<td>• Supports Intel coach, Ray RLLib<br>• Tensorflow, MxNET<br>• Custom, commercial and opensource environments supported - Matlab simulink, energy plus, robo school, pybullet, Amazon Sumerian, AWS Robomaker</td>
+<td>• Depends on framework and algo used, nothing tied to Sagemaker</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<h1 id="algorithms-categorized-by-feature">Algorithms categorized by feature<a hidden class="anchor" aria-hidden="true" href="#algorithms-categorized-by-feature">#</a></h1>
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="table table-dark table-striped table-bordered">
+<thead class="thead-dark">
+<tr>
+<th>Mandatory FLOAT32</th>
+<th>Mandatory INT32</th>
+<th>CPU ONLY</th>
+<th>GPU Only</th>
+<th>Incremental Training Available</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear Learner</td>
+<td>Seq2Seq</td>
+<td>XGBoost</td>
+<td>Seq2Seq</td>
+<td>Image Classification</td>
+</tr>
+<tr>
+<td>Factorization Machines</td>
+<td>Object2Vec</td>
+<td>RCF</td>
+<td>Image Classification</td>
+<td>Semantic Segmentation</td>
+</tr>
+<tr>
+<td></td>
+<td>NTM</td>
+<td>LDA</td>
+<td>Semantic Segmentation</td>
+<td>Object Detection</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Object Detection</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>NTM</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Reinforcement Learning</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<h1 id="algorithms-that-support-distributed-training">Algorithms that support distributed training<a hidden class="anchor" aria-hidden="true" href="#algorithms-that-support-distributed-training">#</a></h1>
+<ul>
+<li>Mnemonic to remember: <strong>F-SKILBDR</strong> as in SkillBuilder (If you can come up with somethig better, please share in comments! )</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="table table-dark table-striped table-bordered">
+<thead class="">
+<tr>
+<th>Distributed Training Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factorization Machine</td>
+</tr>
+<tr>
+<td>Seq2Seq</td>
+</tr>
+<tr>
+<td>K-Means</td>
+</tr>
+<tr>
+<td>IP Insights</td>
+</tr>
+<tr>
+<td>Linear Learner (Not LDA)</td>
+</tr>
+<tr>
+<td>Blazing Text - Word2Vec</td>
+</tr>
+<tr>
+<td>DeepAR</td>
+</tr>
+<tr>
+<td>RCF - Random Cut Forests</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://sudo-code7.github.io/tags/machine/">machine</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/learning/">learning</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/sagemaker/">sagemaker</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/aws/">aws</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/mls-c01/">mls-c01</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/specialty/">specialty</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/exam/">exam</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/algorithms/">algorithms</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/compared/">compared</a></li>
+    </ul>
+    <nav class="paginav">
+      <a class="prev" href="https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-kinesis-compare/">
+        <span class="title">« Prev Page</span>
+        <br>
+        <span>Amazon Kinesis Streams At A Glance</span>
+      </a>
+    </nav>
+
+
+
+
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Amazon Sagemaker Built-in Algorithms Compared on twitter"
+        href="https://twitter.com/intent/tweet/?text=Amazon%20Sagemaker%20Built-in%20Algorithms%20Compared&amp;url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fai-ml-mls-c01%2f&amp;hashtags=machine%2clearning%2csagemaker%2caws%2cmls-c01%2cspecialty%2cexam%2calgorithms%2ccompared">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Amazon Sagemaker Built-in Algorithms Compared on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fai-ml-mls-c01%2f&amp;title=Amazon%20Sagemaker%20Built-in%20Algorithms%20Compared&amp;summary=Amazon%20Sagemaker%20Built-in%20Algorithms%20Compared&amp;source=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fai-ml-mls-c01%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Amazon Sagemaker Built-in Algorithms Compared on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fai-ml-mls-c01%2f&title=Amazon%20Sagemaker%20Built-in%20Algorithms%20Compared">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Amazon Sagemaker Built-in Algorithms Compared on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fai-ml-mls-c01%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Amazon Sagemaker Built-in Algorithms Compared on whatsapp"
+        href="https://api.whatsapp.com/send?text=Amazon%20Sagemaker%20Built-in%20Algorithms%20Compared%20-%20https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fai-ml-mls-c01%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Amazon Sagemaker Built-in Algorithms Compared on telegram"
+        href="https://telegram.me/share/url?text=Amazon%20Sagemaker%20Built-in%20Algorithms%20Compared&amp;url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fai-ml-mls-c01%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://sudo-code7.github.io/">sudo-code</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>
