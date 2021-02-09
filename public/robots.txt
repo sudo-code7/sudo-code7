@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://sudo-code7.github.io/sitemap.xml
