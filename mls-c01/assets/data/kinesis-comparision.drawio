@@ -52,7 +52,7 @@
         <mxCell id="FIZt_8nLxlH7YhZO16tD-17" value="Amazon SageMaker" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.sagemaker;" vertex="1" parent="1">
           <mxGeometry x="425" y="310" width="80" height="110" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;div&gt;(C) 2021 sudo-code&lt;/div&gt;&lt;div&gt;https://apexcoder7.github.io/&lt;/div&gt;" id="kLUiKmEn_dqfuL1wlNL4-1">
+        <UserObject label="&lt;div&gt;(C) 2021 sudo-code&lt;/div&gt;&lt;div&gt;https://sudo-code7.github.io/&lt;/div&gt;" id="kLUiKmEn_dqfuL1wlNL4-1">
           <mxCell style="text;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fontSize=9;fontFamily=Courier New;strokeColor=#82b366;fillColor=#ffffff;" vertex="1" parent="1">
             <mxGeometry x="605" y="430" width="165" height="30" as="geometry" />
           </mxCell>
@@ -120,7 +120,7 @@
         <mxCell id="E07bmeSrQ7LFwmQAp_uC-32" value="Amazon Kinesis Data Analytics" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.kinesis_data_analytics;" vertex="1" parent="ubfk08OJs4WmA_bFlGEE-1">
           <mxGeometry x="610" y="230" width="80" height="120" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;div&gt;(C) 2021 sudo-code&lt;/div&gt;&lt;div&gt;https://apexcoder7.github.io/&lt;/div&gt;" id="Kmy6AuZ7RV1UGT7UhEMJ-0">
+        <UserObject label="&lt;div&gt;(C) 2021 sudo-code&lt;/div&gt;&lt;div&gt;https://sudo-code7.github.io/&lt;/div&gt;" id="Kmy6AuZ7RV1UGT7UhEMJ-0">
           <mxCell style="text;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fontSize=9;fontFamily=Courier New;strokeColor=#82b366;fillColor=#ffffff;" vertex="1" parent="ubfk08OJs4WmA_bFlGEE-1">
             <mxGeometry x="310" y="530" width="165" height="30" as="geometry" />
           </mxCell>
@@ -189,7 +189,7 @@
         <mxCell id="_ucVeFDgrDlcd-M4NOFn-28" value="Amazon Elasticsearch Service" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.elasticsearch_service;" vertex="1" parent="szwfdQcTvEP1srSUGv-F-1">
           <mxGeometry x="530" y="285" width="80" height="120" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;div&gt;(C) 2021 sudo-code&lt;/div&gt;&lt;div&gt;https://apexcoder7.github.io/&lt;/div&gt;" id="HxtrgfGqzyVoSKtLvLbc-0">
+        <UserObject label="&lt;div&gt;(C) 2021 sudo-code&lt;/div&gt;&lt;div&gt;https://sudo-code7.github.io/&lt;/div&gt;" id="HxtrgfGqzyVoSKtLvLbc-0">
           <mxCell style="text;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fontSize=9;fontFamily=Courier New;strokeColor=#82b366;fillColor=#ffffff;" vertex="1" parent="szwfdQcTvEP1srSUGv-F-1">
             <mxGeometry x="330" y="470" width="165" height="30" as="geometry" />
           </mxCell>
@@ -262,7 +262,7 @@
         <mxCell id="ZmEUnzz3KpJLgu5j8LQn-3" value="AWS Lambda" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.lambda;" vertex="1" parent="nTIETpq5PiidVAEhVJ_t-1">
           <mxGeometry x="745" y="70" width="80" height="100" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;div&gt;(C) 2021 sudo-code&lt;/div&gt;&lt;div&gt;https://apexcoder7.github.io/&lt;/div&gt;" id="ZsEvrahDPPBsKMJBh-i0-0">
+        <UserObject label="&lt;div&gt;(C) 2021 sudo-code&lt;/div&gt;&lt;div&gt;https://sudo-code7.github.io/&lt;/div&gt;" id="ZsEvrahDPPBsKMJBh-i0-0">
           <mxCell style="text;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fontSize=9;fontFamily=Courier New;strokeColor=#82b366;fillColor=#ffffff;" vertex="1" parent="nTIETpq5PiidVAEhVJ_t-1">
             <mxGeometry x="670" y="450" width="165" height="30" as="geometry" />
           </mxCell>

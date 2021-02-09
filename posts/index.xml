@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on sudo-code</title>
-    <link>https://apexcoder7.github.io/posts/</link>
+    <link>https://sudo-code7.github.io/posts/</link>
     <description>Recent content in Posts on sudo-code</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate><atom:link href="https://apexcoder7.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amazon Kinesis Streams At A Glance</title>
-      <link>https://apexcoder7.github.io/posts/tech/ml/mls-c01/ai-ml-kinesis-compare/</link>
+      <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-kinesis-compare/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
-      <guid>https://apexcoder7.github.io/posts/tech/ml/mls-c01/ai-ml-kinesis-compare/</guid>
+      <guid>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-kinesis-compare/</guid>
       <description>Ready reference for MLS-C01 and SAP-C01: Amazon Kinesis Streams Compared  No need to study and find out inputs and outputs supported by Kinesis Streams by digging into AWS Documentation Here is a ready to refer comparision of Kinesis streams available on AWS Score points in exam:  Know the right sources and sinks that each stream supports Be cautious about tricky exam questions that state a wrong answer option involving kinesis streams    Kinesis Video Streams - KVS Kinesis Data Streams - KDS Kinesis Data Firehose - KDF Kinesis Data Analytics - KDA Tabular Comparision </description>
     </item>
     
     <item>
       <title>Amazon Sagemaker Built-in Algorithms Compared</title>
-      <link>https://apexcoder7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/</link>
+      <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
-      <guid>https://apexcoder7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/</guid>
+      <guid>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/</guid>
       <description>Ready reference for MLS-C01: Sagemaker Algorithms Compared  Study following table to compare various built-in algorithms in Sagemaker You can use this as a ready reckoner for MLS-C01 AWS Certified Machine Learning Specialty Exam Pay attention: Scroll the table horizontally for more columns Download the table as PDF here   Algorithm Algo. Type Input Format INT/FLOAT Processor Type Instance Multiprocessor
 in Single Machine Multi Machine Use Cases Comments HP     Linear Learner SUPERVISED • RecordIO Wrapped Protobuf / CSV</description>
     </item>
