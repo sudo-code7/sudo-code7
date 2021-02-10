@@ -3,77 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sudo-code7.github.io/tags/architect/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/aws/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://sudo-code7.github.io/posts/tech/ml/mls-c01/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/compared/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/exam/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/kinesis/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/learning/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/machine/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/mls-c01/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/professional/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/sagemaker/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/sap-c01/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/specialty/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/tags/</loc>
     <lastmod>2020-10-15T11:30:03+00:00</lastmod>
   </url>
   
@@ -89,6 +19,76 @@
   
   <url>
     <loc>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/architect/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/aws/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/compared/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/exam/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/kinesis/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/learning/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/machine/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/mls-c01/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/professional/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/sagemaker/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/sap-c01/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/specialty/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url>
   

@@ -5,11 +5,20 @@
     <link>https://sudo-code7.github.io/tags/</link>
     <description>Recent content in Tags on sudo-code</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 15 Oct 2020 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>algorithms</title>
+      <link>https://sudo-code7.github.io/tags/algorithms/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      
+      <guid>https://sudo-code7.github.io/tags/algorithms/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>architect</title>
       <link>https://sudo-code7.github.io/tags/architect/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/architect/</guid>
       <description></description>
@@ -18,7 +27,7 @@
     <item>
       <title>aws</title>
       <link>https://sudo-code7.github.io/tags/aws/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/aws/</guid>
       <description></description>
@@ -27,7 +36,7 @@
     <item>
       <title>compared</title>
       <link>https://sudo-code7.github.io/tags/compared/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/compared/</guid>
       <description></description>
@@ -36,7 +45,7 @@
     <item>
       <title>exam</title>
       <link>https://sudo-code7.github.io/tags/exam/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/exam/</guid>
       <description></description>
@@ -45,7 +54,7 @@
     <item>
       <title>kinesis</title>
       <link>https://sudo-code7.github.io/tags/kinesis/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/kinesis/</guid>
       <description></description>
@@ -54,7 +63,7 @@
     <item>
       <title>learning</title>
       <link>https://sudo-code7.github.io/tags/learning/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/learning/</guid>
       <description></description>
@@ -63,7 +72,7 @@
     <item>
       <title>machine</title>
       <link>https://sudo-code7.github.io/tags/machine/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/machine/</guid>
       <description></description>
@@ -72,7 +81,7 @@
     <item>
       <title>mls-c01</title>
       <link>https://sudo-code7.github.io/tags/mls-c01/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/mls-c01/</guid>
       <description></description>
@@ -81,7 +90,7 @@
     <item>
       <title>professional</title>
       <link>https://sudo-code7.github.io/tags/professional/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/professional/</guid>
       <description></description>
@@ -90,7 +99,7 @@
     <item>
       <title>sagemaker</title>
       <link>https://sudo-code7.github.io/tags/sagemaker/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/sagemaker/</guid>
       <description></description>
@@ -99,7 +108,7 @@
     <item>
       <title>sap-c01</title>
       <link>https://sudo-code7.github.io/tags/sap-c01/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/tags/sap-c01/</guid>
       <description></description>
@@ -108,18 +117,9 @@
     <item>
       <title>specialty</title>
       <link>https://sudo-code7.github.io/tags/specialty/</link>
-      <pubDate>Thu, 15 Oct 2020 11:30:03 +0000</pubDate>
-      
-      <guid>https://sudo-code7.github.io/tags/specialty/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithms</title>
-      <link>https://sudo-code7.github.io/tags/algorithms/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
-      <guid>https://sudo-code7.github.io/tags/algorithms/</guid>
+      <guid>https://sudo-code7.github.io/tags/specialty/</guid>
       <description></description>
     </item>
     
