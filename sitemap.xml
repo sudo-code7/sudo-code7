@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sudo-code7.github.io/posts/tech/ml/mls-c01/</loc>
-    <lastmod>2020-10-15T11:30:03+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://sudo-code7.github.io/tags/algorithms/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url>
@@ -63,6 +58,11 @@
   </url>
   
   <url>
+    <loc>https://sudo-code7.github.io/posts/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sudo-code7.github.io/tags/professional/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url>
@@ -98,10 +98,6 @@
   
   <url>
     <loc>https://sudo-code7.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://sudo-code7.github.io/posts/</loc>
   </url>
   
   <url>
