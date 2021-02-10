@@ -12,7 +12,7 @@
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/</guid>
-      <description>Ready reference for MLS-C01: Sagemaker Algorithms Compared  Study following table to compare various built-in algorithms in Sagemaker You can use this as a ready reckoner for MLS-C01 AWS Certified Machine Learning Specialty Exam Pay attention: Scroll the table horizontally for more columns Download the table as PDF here   Algorithm Algo. Type Input Format INT/FLOAT Processor Type Instance Multiprocessor
+      <description>Sagemaker Algorithms MLS-C01   Ready reference for MLS-C01: Sagemaker Algorithms Compared  Study following table to compare various built-in algorithms in Sagemaker You can use this as a ready reckoner for MLS-C01 AWS Certified Machine Learning Specialty Exam Pay attention: Scroll the table horizontally for more columns Download the table as PDF here   Algorithm Algo. Type Input Format INT/FLOAT Processor Type Instance Multiprocessor
 in Single Machine Multi Machine Use Cases Comments HP     Linear Learner SUPERVISED • RecordIO Wrapped Protobuf / CSV</description>
     </item>
     
