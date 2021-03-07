@@ -41,10 +41,10 @@ if (!doNotTrack) {
 <meta property="og:description" content="In this blog, let&#39;s compare semantic and instance segmentation in brief" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://sudo-code7.github.io/posts/tech/ml/mls-c01/semantic-vs-instance-segmentation/" />
-<meta property="og:image" content="https://sudo-code7.github.io/mls-c01/assets/images/general/aws-cert-back.png" /><meta property="article:published_time" content="2021-03-07T11:30:03+00:00" />
+<meta property="og:image" content="https://sudo-code7.github.io/mls-c01/assets/images/segmentation/image-seg.png" /><meta property="article:published_time" content="2021-03-07T11:30:03+00:00" />
 <meta property="article:modified_time" content="2021-03-07T11:30:03+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://sudo-code7.github.io/mls-c01/assets/images/general/aws-cert-back.png" />
+<meta name="twitter:image" content="https://sudo-code7.github.io/mls-c01/assets/images/segmentation/image-seg.png" />
 <meta name="twitter:title" content="What is the difference between Semantic and Instance Segmentation in Machine Learning?"/>
 <meta name="twitter:description" content="In this blog, let&#39;s compare semantic and instance segmentation in brief"/>
 
@@ -61,7 +61,7 @@ if (!doNotTrack) {
   "articleBody": "What is segmentation of image in machine learning? In the field of computer vision in machine learning, an image can be broken into segments by learning a mask for each segment. Image segmentation is used to locate object boundaries (lines, curves etc.) and assign a label to each pixel.\nFor example, this is from opencv documentation (watershed algorithm) where boundaries of a set of coins are learnt:\nOriginal Image Semantic Segmentation Mask Learnt from Original Image  Exam Tip: Remember to recall image segmentation as a technique when there is a mention of classification of objects in an image at pixel level. Each pixel is assigned a label when segmentation mask is learnt. The only thing is to be more specific when needed is to identify whether to use semantic or instance segmentation, which you’ll learn shortly.\n    Semantic and Instance Segmentation Compared  Semantic Segmentation Instance Segmentation     Objects in image are grouped based on defined categories Refined version of semantic segmentation   Example: A street scene would be segmented by pedestrians, bikes, vehicles, sidewalks etc. Example: Categories like “vehicles” are split into cars, buses , trucks etc.    Instance Segmentation detects each instance of a category      Exam Tip: Think of semantic segmentation as image classification at pixel level – associates a pixel to a class label. Like image classification, semantic segmentation will not detect each distinct object in the image, rather a category of object.\n     Exam Tip: When given a choice among semantic and instance segmentation for autonomous vehicle use case - choose instance segmentation.\n    ",
   "wordCount" : "251",
   "inLanguage": "en",
-  "image":"https://sudo-code7.github.io/mls-c01/assets/images/general/aws-cert-back.png","datePublished": "2021-03-07T11:30:03Z",
+  "image":"https://sudo-code7.github.io/mls-c01/assets/images/segmentation/image-seg.png","datePublished": "2021-03-07T11:30:03Z",
   "dateModified": "2021-03-07T11:30:03Z",
   "author":{
     "@type": "Person",
