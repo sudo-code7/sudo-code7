@@ -5,7 +5,17 @@
     <link>https://sudo-code7.github.io/tags/specialty/</link>
     <description>Recent content in specialty on sudo-code</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/tags/specialty/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/tags/specialty/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How hyper-parameters impact model training?  (with MLS-C01 focus)</title>
+      <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-hyperparameters/</link>
+      <pubDate>Sun, 07 Mar 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-hyperparameters/</guid>
+      <description>What are hyperparameters ? In simple terms, hyperparameters are a set of knobs you can tune before starting the learning process in machine learning. When set to a specific values, the model has a specific performance. When the hyperparameters are set to new values, the model gets new performance values.
+What is performance of a model? In any machine learning process, we want to optimize the objective-function: a fancy name for a function that evaluates model predictions v/s values provided during training.</description>
+    </item>
+    
     <item>
       <title>Amazon Kinesis Streams Compared</title>
       <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-kinesis-compare/</link>
