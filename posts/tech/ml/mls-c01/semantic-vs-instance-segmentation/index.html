@@ -58,8 +58,8 @@ if (!doNotTrack) {
   "keywords": [
     "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "semantic", "instance", "segmentation", "deep", "learning"
   ],
-  "articleBody": "What is segmentation of image in machine learning? In the field of computer vision in machine learning, an image can be broken into segments by learning a mask for each segment. Image segmentation is used to locate object boundaries (lines, curves etc.) and assign a label to each pixel.\nFor example, this is from opencv documentation (watershed algorithm) where boundaries of a set of coins are learnt:\n{{  }} Exam Tip: Remember to recall image segmentation as a technique when there is a mention of classification of objects in an image at pixel level. Each pixel is assigned a label when segmentation mask is learnt. The only thing is to be more specific when needed is to identify whether to use semantic or instance segmentation, which you’ll learn shortly. {{  }}\n   Semantic Segmentation Instance Segmentation     Objects in image are grouped based on defined categories Refined version of semantic segmentation   Example: A street scene would be segmented by pedestrians, bikes, vehicles, sidewalks etc. Example: Categories like “vehicles” are split into cars, buses , trucks etc.    Instance Segmentation detects each instance of a category    {{  }} Exam Tip: Think of semantic segmentation as image classification at pixel level – associates a pixel to a class label. Like image classification, semantic segmentation will not detect each distinct object in the image, rather a category of object. {{  }}\n{{  }} Exam Tip: When given a choice among semantic and instance segmentation for autonomous vehicle use case - choose instance segmentation. {{  }}\n",
-  "wordCount" : "249",
+  "articleBody": "What is segmentation of image in machine learning? In the field of computer vision in machine learning, an image can be broken into segments by learning a mask for each segment. Image segmentation is used to locate object boundaries (lines, curves etc.) and assign a label to each pixel.\nFor example, this is from opencv documentation (watershed algorithm) where boundaries of a set of coins are learnt:\n Exam Tip: Remember to recall image segmentation as a technique when there is a mention of classification of objects in an image at pixel level. Each pixel is assigned a label when segmentation mask is learnt. The only thing is to be more specific when needed is to identify whether to use semantic or instance segmentation, which you’ll learn shortly.\n     Semantic Segmentation Instance Segmentation     Objects in image are grouped based on defined categories Refined version of semantic segmentation   Example: A street scene would be segmented by pedestrians, bikes, vehicles, sidewalks etc. Example: Categories like “vehicles” are split into cars, buses , trucks etc.    Instance Segmentation detects each instance of a category      Exam Tip: Think of semantic segmentation as image classification at pixel level – associates a pixel to a class label. Like image classification, semantic segmentation will not detect each distinct object in the image, rather a category of object.\n     Exam Tip: When given a choice among semantic and instance segmentation for autonomous vehicle use case - choose instance segmentation.\n    ",
+  "wordCount" : "237",
   "inLanguage": "en",
   "image":"https://sudo-code7.github.io/mls-c01/assets/images/general/aws-cert-back.png","datePublished": "2021-03-07T11:30:03Z",
   "dateModified": "2021-03-07T11:30:03Z",
@@ -197,11 +197,51 @@ March 7, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
 <p>For example, this is from opencv documentation (<a href="https://docs.opencv.org/master/d3/db4/tutorial_py_watershed.html">watershed algorithm</a>) where boundaries of a set of coins are learnt:</p>
 <p><img src="https://docs.opencv.org/master/water_coins.jpg" alt="Coins">
 <img src="https://docs.opencv.org/master/water_result.jpg" alt="Coins Boundary"></p>
-<p>{{ <blockquote> }}
-<strong>Exam Tip</strong>: Remember to recall image segmentation as a technique when there is a mention of classification of objects in an image at pixel level. Each pixel is assigned a label when segmentation mask is learnt. The only thing is to be more specific when needed is to identify whether to use semantic or instance segmentation, which you&rsquo;ll learn shortly.
-{{ </blockquote> }}</p>
-<table>
-<thead>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p><strong>Exam Tip</strong>: Remember to recall image segmentation as a technique when there is a mention of classification of objects in an image at pixel level. Each pixel is assigned a label when segmentation mask is learnt. The only thing is to be more specific when needed is to identify whether to use semantic or instance segmentation, which you&rsquo;ll learn shortly.</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="table table-dark table-striped table-bordered">
+<thead class="thead-dark">
 <tr>
 <th>Semantic Segmentation</th>
 <th>Instance Segmentation</th>
@@ -222,12 +262,72 @@ March 7, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
 </tr>
 </tbody>
 </table>
-<p>{{ <blockquote> }}
-<strong>Exam Tip</strong>: Think of semantic segmentation as image classification at pixel level &ndash; associates a pixel to a class label. Like image classification, semantic segmentation will not detect each distinct object in the image, rather a category of object.
-{{ </blockquote> }}</p>
-<p>{{ <blockquote> }}
-<strong>Exam Tip</strong>: When given a choice among semantic and instance segmentation for autonomous vehicle use case -&gt; choose instance segmentation.
-{{ </blockquote> }}</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p><strong>Exam Tip</strong>: Think of semantic segmentation as image classification at pixel level &ndash; associates a pixel to a class label. Like image classification, semantic segmentation will not detect each distinct object in the image, rather a category of object.</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p><strong>Exam Tip</strong>: When given a choice among semantic and instance segmentation for autonomous vehicle use case -&gt; choose instance segmentation.</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
 
 </div>
   <footer class="post-footer">
