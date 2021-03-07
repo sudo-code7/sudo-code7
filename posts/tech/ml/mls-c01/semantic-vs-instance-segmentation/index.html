@@ -58,8 +58,8 @@ if (!doNotTrack) {
   "keywords": [
     "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "semantic", "instance", "segmentation", "deep", "learning"
   ],
-  "articleBody": "What is segmentation of image in machine learning? In the field of computer vision in machine learning, an image can be broken into segments by learning a mask for each segment. Image segmentation is used to locate object boundaries (lines, curves etc.) and assign a label to each pixel.\nFor example, this is from opencv documentation (watershed algorithm) where boundaries of a set of coins are learnt:\n Exam Tip: Remember to recall image segmentation as a technique when there is a mention of classification of objects in an image at pixel level. Each pixel is assigned a label when segmentation mask is learnt. The only thing is to be more specific when needed is to identify whether to use semantic or instance segmentation, which you’ll learn shortly.\n     Semantic Segmentation Instance Segmentation     Objects in image are grouped based on defined categories Refined version of semantic segmentation   Example: A street scene would be segmented by pedestrians, bikes, vehicles, sidewalks etc. Example: Categories like “vehicles” are split into cars, buses , trucks etc.    Instance Segmentation detects each instance of a category      Exam Tip: Think of semantic segmentation as image classification at pixel level – associates a pixel to a class label. Like image classification, semantic segmentation will not detect each distinct object in the image, rather a category of object.\n     Exam Tip: When given a choice among semantic and instance segmentation for autonomous vehicle use case - choose instance segmentation.\n    ",
-  "wordCount" : "237",
+  "articleBody": "What is segmentation of image in machine learning? In the field of computer vision in machine learning, an image can be broken into segments by learning a mask for each segment. Image segmentation is used to locate object boundaries (lines, curves etc.) and assign a label to each pixel.\nFor example, this is from opencv documentation (watershed algorithm) where boundaries of a set of coins are learnt:\n Exam Tip: Remember to recall image segmentation as a technique when there is a mention of classification of objects in an image at pixel level. Each pixel is assigned a label when segmentation mask is learnt. The only thing is to be more specific when needed is to identify whether to use semantic or instance segmentation, which you’ll learn shortly.\n    Semantic and Instance Segmentation Compared  Semantic Segmentation Instance Segmentation     Objects in image are grouped based on defined categories Refined version of semantic segmentation   Example: A street scene would be segmented by pedestrians, bikes, vehicles, sidewalks etc. Example: Categories like “vehicles” are split into cars, buses , trucks etc.    Instance Segmentation detects each instance of a category      Exam Tip: Think of semantic segmentation as image classification at pixel level – associates a pixel to a class label. Like image classification, semantic segmentation will not detect each distinct object in the image, rather a category of object.\n     Exam Tip: When given a choice among semantic and instance segmentation for autonomous vehicle use case - choose instance segmentation.\n    ",
+  "wordCount" : "242",
   "inLanguage": "en",
   "image":"https://sudo-code7.github.io/mls-c01/assets/images/general/aws-cert-back.png","datePublished": "2021-03-07T11:30:03Z",
   "dateModified": "2021-03-07T11:30:03Z",
@@ -186,7 +186,10 @@ March 7, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
         <div class="details">Table of Contents</div>
       </summary>
       <div class="inner"><ul><li>
-        <a href="#what-is-segmentation-of-image-in-machine-learning" aria-label="What is segmentation of image in machine learning?">What is segmentation of image in machine learning?</a></li></ul>
+        <a href="#what-is-segmentation-of-image-in-machine-learning" aria-label="What is segmentation of image in machine learning?">What is segmentation of image in machine learning?</a><ul>
+            <li>
+        <a href="#semantic-and-instance-segmentation-compared" aria-label="Semantic and Instance Segmentation Compared">Semantic and Instance Segmentation Compared</a></li></ul>
+</li></ul>
       </div>
     </details>
   </div>
@@ -195,8 +198,8 @@ March 7, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
 <h1 id="what-is-segmentation-of-image-in-machine-learning">What is segmentation of image in machine learning?<a hidden class="anchor" aria-hidden="true" href="#what-is-segmentation-of-image-in-machine-learning">#</a></h1>
 <p>In the field of computer vision in machine learning, an image can be broken into segments by learning a mask for each segment. Image segmentation is used to locate object boundaries (lines, curves etc.) and assign a label to each pixel.</p>
 <p>For example, this is from opencv documentation (<a href="https://docs.opencv.org/master/d3/db4/tutorial_py_watershed.html">watershed algorithm</a>) where boundaries of a set of coins are learnt:</p>
-<p><img src="https://docs.opencv.org/master/water_coins.jpg" alt="Coins">
-<img src="https://docs.opencv.org/master/water_result.jpg" alt="Coins Boundary"></p>
+<p><img src="https://docs.opencv.org/master/water_coins.jpg#center" alt="Coins">
+<img src="https://docs.opencv.org/master/water_result.jpg#center" alt="Coins Boundary"></p>
 
 
 
@@ -229,6 +232,7 @@ March 7, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
   </footer>
 </blockquote>
 
+<h2 id="semantic-and-instance-segmentation-compared">Semantic and Instance Segmentation Compared<a hidden class="anchor" aria-hidden="true" href="#semantic-and-instance-segmentation-compared">#</a></h2>
 
 
 
