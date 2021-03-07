@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://sudo-code7.github.io/tags/instance/</loc>
+    <lastmod>2021-03-07T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sudo-code7.github.io/tags/learning/</loc>
     <lastmod>2021-03-07T11:30:03+00:00</lastmod>
   </url>
@@ -83,6 +88,16 @@
   </url>
   
   <url>
+    <loc>https://sudo-code7.github.io/tags/segmentation/</loc>
+    <lastmod>2021-03-07T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/tags/semantic/</loc>
+    <lastmod>2021-03-07T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sudo-code7.github.io/tags/specialty/</loc>
     <lastmod>2021-03-07T11:30:03+00:00</lastmod>
   </url>
@@ -104,6 +119,11 @@
   
   <url>
     <loc>https://sudo-code7.github.io/tags/tuning/</loc>
+    <lastmod>2021-03-07T11:30:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudo-code7.github.io/posts/tech/ml/mls-c01/semantic-vs-instance-segmentation/</loc>
     <lastmod>2021-03-07T11:30:03+00:00</lastmod>
   </url>
   
