@@ -2,16 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sudo-code7.github.io/tags/activation/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/posts/tech/ml/mls-c01/softmax-vs-sigmoid-activation/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
     <loc>https://sudo-code7.github.io/tags/aws/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/deep/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/exam/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/functions/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/learning/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/machine/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/mls-c01/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/posts/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/sagemaker/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/specialty/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://sudo-code7.github.io/tags/training/</loc>
+    <lastmod>2021-03-12T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://sudo-code7.github.io/tags/bias/</loc>
     <lastmod>2021-03-11T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://sudo-code7.github.io/posts/tech/ml/mls-c01/fixing-overfit-and-underfit-models/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://sudo-code7.github.io/tags/exam/</loc>
     <lastmod>2021-03-11T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://sudo-code7.github.io/tags/guide/</loc>
@@ -20,43 +59,16 @@
     <loc>https://sudo-code7.github.io/posts/tech/ml/mls-c01/mls-c01-exap-prep-pass-guide/</loc>
     <lastmod>2021-03-11T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://sudo-code7.github.io/tags/learning/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://sudo-code7.github.io/tags/machine/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://sudo-code7.github.io/tags/mls-c01/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
     <loc>https://sudo-code7.github.io/tags/overfit/</loc>
     <lastmod>2021-03-11T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://sudo-code7.github.io/tags/pass/</loc>
     <lastmod>2021-03-11T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://sudo-code7.github.io/posts/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
     <loc>https://sudo-code7.github.io/tags/preparation/</loc>
     <lastmod>2021-03-11T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://sudo-code7.github.io/tags/sagemaker/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
     <loc>https://sudo-code7.github.io/tags/sap-c01/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://sudo-code7.github.io/tags/specialty/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://sudo-code7.github.io/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://sudo-code7.github.io/tags/</loc>
-    <lastmod>2021-03-11T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://sudo-code7.github.io/tags/training/</loc>
     <lastmod>2021-03-11T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://sudo-code7.github.io/tags/underfit/</loc>
@@ -66,9 +78,6 @@
     <lastmod>2021-03-11T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://sudo-code7.github.io/tags/architect/</loc>
-    <lastmod>2021-03-07T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://sudo-code7.github.io/tags/deep/</loc>
     <lastmod>2021-03-07T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://sudo-code7.github.io/tags/effect/</loc>
