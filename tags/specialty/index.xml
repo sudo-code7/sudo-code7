@@ -7,6 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 11 Mar 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/tags/specialty/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Bias-Variance and Model Underfit-Overfit demystified!</title>
+      <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/fixing-overfit-and-underfit-models/</link>
+      <pubDate>Thu, 11 Mar 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://sudo-code7.github.io/posts/tech/ml/mls-c01/fixing-overfit-and-underfit-models/</guid>
+      <description>We need to learn about bias and variance in order to understand how to fix underfitting and overfitting of model. Spend enough time to read and understand, everything till the end of the blog, where you get to know how to apply the concepts (helpful for MLS-C01 exam too!)
+What are Bias and Variance ? Welcome to the world of bias and variance. It may be confusing at first, but by end of the blog, you&amp;rsquo;ll have full clarity.</description>
+    </item>
+    
+    <item>
       <title>How to pass MLS-C01 Exam? How to Prepare?</title>
       <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/mls-c01-exap-prep-pass-guide/</link>
       <pubDate>Thu, 11 Mar 2021 11:30:03 +0000</pubDate>
@@ -35,7 +45,7 @@ What is performance of a model? In any machine learning process, we want to opti
       <description>Courtesy: Wikimedia
 What is segmentation of image in machine learning? In the field of computer vision in machine learning, an image can be broken into segments by learning a mask for each segment. Image segmentation is used to locate object boundaries (lines, curves etc.) and assign a label to each pixel.
 For example, this is from opencv documentation (watershed algorithm) where boundaries of a set of coins are learnt:
-Original Image Semantic Segmentation Mask Learnt from Original Image  Exam Tip: Remember to recall image segmentation as a technique when there is a mention of classification of objects in an image at pixel level.</description>
+Original Image Semantic Segmentation Mask Learnt from Original Image  Sudo Exam Tip: Remember to recall image segmentation as a technique when there is a mention of classification of objects in an image at pixel level.</description>
     </item>
     
     <item>
