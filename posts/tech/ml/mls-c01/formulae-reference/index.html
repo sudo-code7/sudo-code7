@@ -90,11 +90,11 @@ if (!doNotTrack) {
   "@type": "BlogPosting",
   "headline": "AWS Machine Learning Specialty: Know these math formulae before exam!",
   "name": "AWS Machine Learning Specialty: Know these math formulae before exam!",
-  "description": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\nRecall …",
+  "description": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\ …",
   "keywords": [
     "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "deep", "learning", "training", "math", "formula", "formulae"
   ],
-  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\nRecall = Sensitivity = TPR = \\frac{TP}{TP+FN} \\\\\\\\\nSpecificity = TNR = \\frac{TN}{TN+FP} \\\\\\\\\n$$\nF1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} \\\\\\\\ $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} \\\\\\\\ $$\n    TF-IDF: Term Frequency - Inverse Document Frequency  Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents $$ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n$$ Document frequency (df) of a term is calculated only once over all n documents $$ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} $$ Inverse document frequency idf is simply inverse of df $$ idf(t) = \\frac{1}{df(t)} $$ Finally tf-idf is calculated for every term using tf and idf $$ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ $$  ",
+  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\nRecall = Sensitivity = TPR = \\frac{TP}{TP+FN} \\\\\\\\\nSpecificity = TNR = \\frac{TN}{TN+FP} \\\\\\\\\n$$\n    F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} \\\\\\\\ $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} \\\\\\\\ $$\n    TF-IDF: Term Frequency - Inverse Document Frequency  Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n$$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = \\frac{1}{df(t)} $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ $$\n    ",
   "wordCount" : "256",
   "inLanguage": "en",
   "image":"https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png","datePublished": "2021-03-12T11:30:03Z",
@@ -284,11 +284,42 @@ March 12, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
 <h1 id="formulae-cheat-sheet-to-prepare-for-machine-learning-specialty">Formulae Cheat Sheet to Prepare for Machine Learning Specialty<a hidden class="anchor" aria-hidden="true" href="#formulae-cheat-sheet-to-prepare-for-machine-learning-specialty">#</a></h1>
 <h2 id="basic-formulae-for-classification">Basic Formulae for Classification<a hidden class="anchor" aria-hidden="true" href="#basic-formulae-for-classification">#</a></h2>
 <h3 id="precision-recall-and-specificity">Precision, Recall and Specificity<a hidden class="anchor" aria-hidden="true" href="#precision-recall-and-specificity">#</a></h3>
-<p>$$
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
 Precision = PPV = \frac{TP}{TP+FP} \\\\<br>
 Recall = Sensitivity = TPR = \frac{TP}{TP+FN} \\\\<br>
 Specificity = TNR = \frac{TN}{TN+FP} \\\\<br>
 $$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
 <h3 id="f1-score">F1-Score<a hidden class="anchor" aria-hidden="true" href="#f1-score">#</a></h3>
 
 
@@ -326,23 +357,144 @@ $$</p>
 
 <h2 id="tf-idf-term-frequency---inverse-document-frequency">TF-IDF: Term Frequency - Inverse Document Frequency<a hidden class="anchor" aria-hidden="true" href="#tf-idf-term-frequency---inverse-document-frequency">#</a></h2>
 <ul>
-<li>Term frequency (tf) of a <code>term</code> is calculated over all <code>n</code> documents. If <code>tf</code> is to be calculated on many terms, the process is repeated again on all <code>n</code> documents
-$$
+<li>Term frequency (tf) of a <code>term</code> is calculated over all <code>n</code> documents. If <code>tf</code> is to be calculated on many terms, the process is repeated again on all <code>n</code> documents</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
 tf(t, d_{n}) \\
 = {\text{Term frequency of term } t \text{ in } document_{n} }  \\
 = \frac{\text{Number of times }t\text{ occurs in } d_{n}}{\text{Number of words in }d_{n}} \\<br>
-$$</li>
-<li>Document frequency (df) of a <code>term</code> is calculated only once over all <code>n</code> documents
-$$
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<ul>
+<li>Document frequency (df) of a <code>term</code> is calculated only once over all <code>n</code> documents</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
 df(t) = {\text{Document frequency of term } t \text{ in all documents} } \\<br>
 = \frac{\text{Number of documents with term  }t}{\text{Total number of documents i.e. }n}
-$$</li>
-<li>Inverse document frequency <code>idf</code> is simply inverse of <code>df</code>
-$$
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<ul>
+<li>Inverse document frequency <code>idf</code> is simply inverse of <code>df</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
 idf(t) = \frac{1}{df(t)}
-$$</li>
-<li>Finally <code>tf-idf</code> is calculated for every term using <code>tf</code> and <code>idf</code>
-$$
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<ul>
+<li>Finally <code>tf-idf</code> is calculated for every term using <code>tf</code> and <code>idf</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
 tf(t, d_{n}) * idf(t) \\\\
 {\text{Which translates to every term as }} \\
 tf(t, d_{1}) * idf(t) \\
@@ -351,8 +503,17 @@ tf(t, d_{3}) * idf(t) \\
 tf(t, d_{4}) * idf(t) \\
 {\text{so on &hellip; till &hellip;}} \\
 tf(t, d_{n}) * idf(t) \\
-$$</li>
-</ul>
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
 
 </div>
   <footer class="post-footer">

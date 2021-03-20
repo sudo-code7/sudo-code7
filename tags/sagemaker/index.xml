@@ -21,11 +21,11 @@
       <pubDate>Fri, 12 Mar 2021 11:30:03 +0000</pubDate>
       
       <guid>https://sudo-code7.github.io/posts/tech/ml/mls-c01/formulae-reference/</guid>
-      <description>Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity $$ Precision = PPV = \frac{TP}{TP+FP} \\\\
+      <description>Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = PPV = \frac{TP}{TP+FP} \\\\
 Recall = Sensitivity = TPR = \frac{TP}{TP+FN} \\\\
 Specificity = TNR = \frac{TN}{TN+FP} \\\\
 $$
-F1-Score  $$ F1 = \underbrace{\frac{2 * TP}{TP + FP + FN}}_{\text{In terms of TP, FP and FN}} \\\\ $$
+    F1-Score  $$ F1 = \underbrace{\frac{2 * TP}{TP + FP + FN}}_{\text{In terms of TP, FP and FN}} \\\\ $$
 $$ F1 = \underbrace{\frac{2 * Precision * Recall}{Precision + Recall}}_{\text{In terms Precision and Recall}} \\\\ $$</description>
     </item>
     
