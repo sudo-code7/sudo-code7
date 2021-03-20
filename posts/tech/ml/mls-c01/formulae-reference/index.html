@@ -94,8 +94,8 @@ if (!doNotTrack) {
   "keywords": [
     "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "deep", "learning", "training", "math", "formula", "formulae"
   ],
-  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\nRecall = Sensitivity = TPR = \\frac{TP}{TP+FN} \\\\\\\\\nSpecificity = TNR = \\frac{TN}{TN+FP} \\\\\\\\\n$$\n    F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} \\\\\\\\ $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} \\\\\\\\ $$\n    TF-IDF: Term Frequency - Inverse Document Frequency  Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n$$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = \\frac{1}{df(t)} $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ $$\n    ",
-  "wordCount" : "256",
+  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\nRecall = Sensitivity = TPR = \\frac{TP}{TP+FN} \\\\\\\\\nSpecificity = TNR = \\frac{TN}{TN+FP} \\\\\\\\\n$$\n    F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} \\\\\\\\ $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} \\\\\\\\ $$\n    TF-IDF: Term Frequency - Inverse Document Frequency  Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n$$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = \\frac{1}{df(t)} $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ $$\n    Kinesis Shards calculation  Number of shards required for a Kinesis stream is a precisely calculation based on:  Record size Write bandwidth (into kinesis stream) Read bandwidth (out of kinesis stream)   The #shards is calculated as  $$ shards = max(\\frac{\\text{Write bandwidth in KB}}{1024},\\frac{\\text{Read bandwidth in KB}}{1024}) \\\\\\\\\nWhere,\\\\\\\\ \\text{Write Bandwidth in KB} = \\text{Average Record Size in KB} * \\text{Records Per Second} \\\\\\\\ \\text{Read Bandwidth in KB} = \\text{Write Bandwidth in KB} * \\text{Number of Consumers}  $$\n      ",
+  "wordCount" : "332",
   "inLanguage": "en",
   "image":"https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png","datePublished": "2021-03-12T11:30:03Z",
   "dateModified": "2021-03-12T11:30:03Z",
@@ -163,7 +163,7 @@ if (!doNotTrack) {
     "datePublished": "2021-03-12 11:30:03 \u002b0000 \u002b0000",
     "dateModified" : "2021-03-12 11:30:03 \u002b0000 \u002b0000",
     "url" : "https:\/\/sudo-code7.github.io\/posts\/tech\/ml\/mls-c01\/formulae-reference\/",
-    "wordCount" : "256",
+    "wordCount" : "332",
     "keywords" : [ "machine","learning","sagemaker","aws","mls-c01","specialty","exam","deep","learning","training","math","formula","formulae","Blog" ],
     "image": "https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png"
 }
@@ -274,7 +274,8 @@ March 12, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
         <a href="#precision-recall-and-specificity" aria-label="Precision, Recall and Specificity">Precision, Recall and Specificity</a></li><li>
         <a href="#f1-score" aria-label="F1-Score">F1-Score</a></li></ul>
     </li><li>
-        <a href="#tf-idf-term-frequency---inverse-document-frequency" aria-label="TF-IDF: Term Frequency - Inverse Document Frequency">TF-IDF: Term Frequency - Inverse Document Frequency</a></li></ul>
+        <a href="#tf-idf-term-frequency---inverse-document-frequency" aria-label="TF-IDF: Term Frequency - Inverse Document Frequency">TF-IDF: Term Frequency - Inverse Document Frequency</a></li><li>
+        <a href="#kinesis-shards-calculation" aria-label="Kinesis Shards calculation">Kinesis Shards calculation</a></li></ul>
 </li></ul>
       </div>
     </details>
@@ -514,6 +515,57 @@ $$</p>
   </footer>
 </blockquote>
 
+<h2 id="kinesis-shards-calculation">Kinesis Shards calculation<a hidden class="anchor" aria-hidden="true" href="#kinesis-shards-calculation">#</a></h2>
+<ul>
+<li>Number of shards required for a <code>Kinesis</code> stream is a precisely calculation based on:
+<ul>
+<li>Record size</li>
+<li>Write bandwidth (into kinesis stream)</li>
+<li>Read bandwidth (out of kinesis stream)</li>
+</ul>
+</li>
+<li>The <code>#shards</code> is calculated as
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p><p>$$
+shards = max(\frac{\text{Write bandwidth in KB}}{1024},\frac{\text{Read bandwidth in KB}}{1024}) \\\\</p>
+<pre><code>Where,\\\\
+
+\text{Write Bandwidth in KB} = \text{Average Record Size in KB} * \text{Records Per Second} \\\\
+\text{Read Bandwidth in KB} = \text{Write Bandwidth in KB} * \text{Number of Consumers}
+</code></pre>
+<p>$$</p>
+</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+</li>
+</ul>
 
 </div>
   <footer class="post-footer">
