@@ -28,8 +28,40 @@
 
 
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+
+        MathJax.Hub.Config({
+            
+            TeX: { equationNumbers: { autoNumber: "AMS" } },
+            jax: ["input/TeX","output/HTML-CSS"],
+            displayAlign: "left"
+        });
+    </script>
+
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -58,12 +90,12 @@ if (!doNotTrack) {
   "@type": "BlogPosting",
   "headline": "AWS Machine Learning Specialty: Know these math formulae before exam!",
   "name": "AWS Machine Learning Specialty: Know these math formulae before exam!",
-  "description": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty $$ \\begin{aligned} Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\\\\\nRecall = Sensitivity = TPR = \\frac{TP}{TP+FN} \\\\\\\\\\\\ …",
+  "description": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\nRecall …",
   "keywords": [
     "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "deep", "learning", "training", "math", "formula", "formulae"
   ],
-  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty $$ \\begin{aligned} Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\\\\\nRecall = Sensitivity = TPR = \\frac{TP}{TP+FN} \\\\\\\\\\\\\nSpecificity = TNR = \\frac{TN}{TN+FP} \\\\\\\\\\\\\nF1 = \\frac{2 * TP}{TP+FP+FN} = \\frac{2 * Precision * Recall }{ Precision + Recall} \\\\\\\\\\\\\n\\end{aligned} $$\n",
-  "wordCount" : "49",
+  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\nRecall = Sensitivity = TPR = \\frac{TP}{TP+FN} \\\\\\\\\nSpecificity = TNR = \\frac{TN}{TN+FP} \\\\\\\\\n$$\nF1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} \\\\\\\\ $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} \\\\\\\\ $$\n    TF-IDF: Term Frequency - Inverse Document Frequency  Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents $$ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n$$ Document frequency (df) of a term is calculated only once over all n documents $$ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} $$ Inverse document frequency idf is simply inverse of df $$ idf(t) = \\frac{1}{df(t)} $$ Finally tf-idf is calculated for every term using tf and idf $$ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ $$  ",
+  "wordCount" : "256",
   "inLanguage": "en",
   "image":"https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png","datePublished": "2021-03-12T11:30:03Z",
   "dateModified": "2021-03-12T11:30:03Z",
@@ -131,7 +163,7 @@ if (!doNotTrack) {
     "datePublished": "2021-03-12 11:30:03 \u002b0000 \u002b0000",
     "dateModified" : "2021-03-12 11:30:03 \u002b0000 \u002b0000",
     "url" : "https:\/\/sudo-code7.github.io\/posts\/tech\/ml\/mls-c01\/formulae-reference\/",
-    "wordCount" : "49",
+    "wordCount" : "256",
     "keywords" : [ "machine","learning","sagemaker","aws","mls-c01","specialty","exam","deep","learning","training","math","formula","formulae","Blog" ],
     "image": "https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png"
 }
@@ -224,7 +256,7 @@ if (!doNotTrack) {
     </div>
     <div class="post-meta">
 
-March 12, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;sudo-code
+March 12, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
 
     </div>
   </header> 
@@ -235,21 +267,92 @@ March 12, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;sudo-code
         <div class="details">Table of Contents</div>
       </summary>
       <div class="inner"><ul><li>
-        <a href="#formulae-cheat-sheet-to-prepare-for-machine-learning-specialty" aria-label="Formulae Cheat Sheet to Prepare for Machine Learning Specialty">Formulae Cheat Sheet to Prepare for Machine Learning Specialty</a></li></ul>
+        <a href="#formulae-cheat-sheet-to-prepare-for-machine-learning-specialty" aria-label="Formulae Cheat Sheet to Prepare for Machine Learning Specialty">Formulae Cheat Sheet to Prepare for Machine Learning Specialty</a><ul>
+            <li>
+        <a href="#basic-formulae-for-classification" aria-label="Basic Formulae for Classification">Basic Formulae for Classification</a><ul>
+            <li>
+        <a href="#precision-recall-and-specificity" aria-label="Precision, Recall and Specificity">Precision, Recall and Specificity</a></li><li>
+        <a href="#f1-score" aria-label="F1-Score">F1-Score</a></li></ul>
+    </li><li>
+        <a href="#tf-idf-term-frequency---inverse-document-frequency" aria-label="TF-IDF: Term Frequency - Inverse Document Frequency">TF-IDF: Term Frequency - Inverse Document Frequency</a></li></ul>
+</li></ul>
       </div>
     </details>
   </div>
   <div class="post-content">
 <p><img src="https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png#center" alt="Cover"></p>
 <h1 id="formulae-cheat-sheet-to-prepare-for-machine-learning-specialty">Formulae Cheat Sheet to Prepare for Machine Learning Specialty<a hidden class="anchor" aria-hidden="true" href="#formulae-cheat-sheet-to-prepare-for-machine-learning-specialty">#</a></h1>
+<h2 id="basic-formulae-for-classification">Basic Formulae for Classification<a hidden class="anchor" aria-hidden="true" href="#basic-formulae-for-classification">#</a></h2>
+<h3 id="precision-recall-and-specificity">Precision, Recall and Specificity<a hidden class="anchor" aria-hidden="true" href="#precision-recall-and-specificity">#</a></h3>
 <p>$$
-\begin{aligned}
-Precision = PPV = \frac{TP}{TP+FP} \\\\\\<br>
-Recall = Sensitivity = TPR = \frac{TP}{TP+FN} \\\\\\<br>
-Specificity = TNR = \frac{TN}{TN+FP} \\\\\\<br>
-F1 = \frac{2 * TP}{TP+FP+FN}  = \frac{2 * Precision * Recall }{ Precision + Recall} \\\\\\<br>
-\end{aligned}
+Precision = PPV = \frac{TP}{TP+FP} \\\\<br>
+Recall = Sensitivity = TPR = \frac{TP}{TP+FN} \\\\<br>
+Specificity = TNR = \frac{TN}{TN+FP} \\\\<br>
 $$</p>
+<h3 id="f1-score">F1-Score<a hidden class="anchor" aria-hidden="true" href="#f1-score">#</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p><p>$$ F1 = \underbrace{\frac{2 * TP}{TP + FP + FN}}_{\text{In terms of TP, FP and FN}} \\\\ $$</p>
+<p>$$ F1 = \underbrace{\frac{2 * Precision * Recall}{Precision + Recall}}_{\text{In terms Precision and Recall}} \\\\ $$</p>
+</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<h2 id="tf-idf-term-frequency---inverse-document-frequency">TF-IDF: Term Frequency - Inverse Document Frequency<a hidden class="anchor" aria-hidden="true" href="#tf-idf-term-frequency---inverse-document-frequency">#</a></h2>
+<ul>
+<li>Term frequency (tf) of a <code>term</code> is calculated over all <code>n</code> documents. If <code>tf</code> is to be calculated on many terms, the process is repeated again on all <code>n</code> documents
+$$
+tf(t, d_{n}) \\
+= {\text{Term frequency of term } t \text{ in } document_{n} }  \\
+= \frac{\text{Number of times }t\text{ occurs in } d_{n}}{\text{Number of words in }d_{n}} \\<br>
+$$</li>
+<li>Document frequency (df) of a <code>term</code> is calculated only once over all <code>n</code> documents
+$$
+df(t) = {\text{Document frequency of term } t \text{ in all documents} } \\<br>
+= \frac{\text{Number of documents with term  }t}{\text{Total number of documents i.e. }n}
+$$</li>
+<li>Inverse document frequency <code>idf</code> is simply inverse of <code>df</code>
+$$
+idf(t) = \frac{1}{df(t)}
+$$</li>
+<li>Finally <code>tf-idf</code> is calculated for every term using <code>tf</code> and <code>idf</code>
+$$
+tf(t, d_{n}) * idf(t) \\\\
+{\text{Which translates to every term as }} \\
+tf(t, d_{1}) * idf(t) \\
+tf(t, d_{2}) * idf(t) \\
+tf(t, d_{3}) * idf(t) \\
+tf(t, d_{4}) * idf(t) \\
+{\text{so on &hellip; till &hellip;}} \\
+tf(t, d_{n}) * idf(t) \\
+$$</li>
+</ul>
 
 </div>
   <footer class="post-footer">
