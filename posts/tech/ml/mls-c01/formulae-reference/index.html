@@ -77,10 +77,10 @@ if (!doNotTrack) {
 <meta property="og:description" content="Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://sudo-code7.github.io/posts/tech/ml/mls-c01/formulae-reference/" />
-<meta property="og:image" content="https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png" /><meta property="article:published_time" content="2021-03-19T11:30:03+00:00" />
+<meta property="og:image" content="https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png" /><meta property="article:published_time" content="2021-03-19T11:30:03+00:00" />
 <meta property="article:modified_time" content="2021-03-19T11:30:03+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png" />
+<meta name="twitter:image" content="https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png" />
 <meta name="twitter:title" content="AWS Machine Learning Specialty: Know These Math Formulae Before Exam!"/>
 <meta name="twitter:description" content="Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam"/>
 
@@ -90,14 +90,14 @@ if (!doNotTrack) {
   "@type": "BlogPosting",
   "headline": "AWS Machine Learning Specialty: Know These Math Formulae Before Exam!",
   "name": "AWS Machine Learning Specialty: Know These Math Formulae Before Exam!",
-  "description": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\ …",
+  "description": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped …",
   "keywords": [
     "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "deep", "learning", "training", "math", "formula", "formulae"
   ],
-  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = PPV = \\frac{TP}{TP+FP} \\\\\\\\\nRecall = Sensitivity = TPR = \\frac{TP}{TP+FN} \\\\\\\\\nSpecificity = TNR = \\frac{TN}{TN+FP} \\\\\\\\\n$$\n    F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} \\\\\\\\ $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} \\\\\\\\ $$\n    TF-IDF: Term Frequency - Inverse Document Frequency  Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n$$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = \\frac{1}{df(t)} $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ $$\n    Kinesis Shards Calculation  Number of shards required for a Kinesis stream is a precisely calculation based on:  Record size Write Bandwidth (into kinesis stream) Read Bandwidth (out of kinesis stream)   The number of shards = shards is calculated as   $$ shards = max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\\\\\\\\nWhere,\\\\\n\\text{Write Bandwidth in KB} = \\text{Average Record Size in KB} * \\text{Records Per Second} \\\\\n\\text{Read Bandwidth in KB} = \\text{Write Bandwidth in KB} * \\text{Number of Consumers} $$\n    ",
-  "wordCount" : "336",
+  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped Write down both versions of confusion matrix in a rough sheet provided as soon as you start exam  Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = Positive Prediction Value (PPV) = \\frac{TP}{TP+FP} \\\\\\\\\nRecall = Sensitivity = True Positive Rate (TPR) = \\frac{TP}{TP+FN} \\\\\\\\\nSpecificity = True Negative Rate (TNR) = \\frac{TN}{TN+FP} \\\\\\\\\n$$\n     Sudo Exam Tip:\n How to remember above formulae ?  After having understood what above formulae mean, only way to quickly reproduce is to have some sort of recall :) from your memory, here is a trick, the way I remember:  Precision:  Prevision formula has all components ending with P i.e. Precision = TP/(TP+FP)   Recall:  Once you know Precision, for Recall just replace the FP - FN, that’s all!   Specificity  Once you know Precision, for Specificity just replace the TP - TN, that’s all!            F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} \\\\\\\\ $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} \\\\\\\\ $$\n    TF-IDF: Term Frequency - Inverse Document Frequency  Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n$$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = \\frac{1}{df(t)} $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ $$\n    Kinesis Shards Calculation  Number of shards required for a Kinesis stream is a precisely calculation based on:  Record size Write Bandwidth (into kinesis stream) Read Bandwidth (out of kinesis stream)   The number of shards = shards is calculated as   $$ shards = max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\\\\\\\\nWhere,\\\\\n\\text{Write Bandwidth in KB} = \\text{Average Record Size in KB} * \\text{Records Per Second} \\\\\n\\text{Read Bandwidth in KB} = \\text{Write Bandwidth in KB} * \\text{Number of Consumers} $$\n     Reference: Read this FAQ on Kinesis Data Streams  Search for question How do I decide the throughput of my Kinesis stream?    ",
+  "wordCount" : "485",
   "inLanguage": "en",
-  "image":"https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png","datePublished": "2021-03-19T11:30:03Z",
+  "image":"https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png","datePublished": "2021-03-19T11:30:03Z",
   "dateModified": "2021-03-19T11:30:03Z",
   "author":{
     "@type": "Person",
@@ -163,9 +163,9 @@ if (!doNotTrack) {
     "datePublished": "2021-03-19 11:30:03 \u002b0000 \u002b0000",
     "dateModified" : "2021-03-19 11:30:03 \u002b0000 \u002b0000",
     "url" : "https:\/\/sudo-code7.github.io\/posts\/tech\/ml\/mls-c01\/formulae-reference\/",
-    "wordCount" : "336",
+    "wordCount" : "485",
     "keywords" : [ "machine","learning","sagemaker","aws","mls-c01","specialty","exam","deep","learning","training","math","formula","formulae","Blog" ],
-    "image": "https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png"
+    "image": "https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png"
 }
 </script>
 <script>
@@ -256,7 +256,7 @@ if (!doNotTrack) {
     </div>
     <div class="post-meta">
 
-March 19, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
+March 19, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;sudo-code
 
     </div>
   </header> 
@@ -269,6 +269,7 @@ March 19, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
       <div class="inner"><ul><li>
         <a href="#formulae-cheat-sheet-to-prepare-for-machine-learning-specialty" aria-label="Formulae Cheat Sheet to Prepare for Machine Learning Specialty">Formulae Cheat Sheet to Prepare for Machine Learning Specialty</a><ul>
             <li>
+        <a href="#remember-how-to-write-confusion-matrix" aria-label="Remember how to write Confusion Matrix">Remember how to write Confusion Matrix</a></li><li>
         <a href="#basic-formulae-for-classification" aria-label="Basic Formulae for Classification">Basic Formulae for Classification</a><ul>
             <li>
         <a href="#precision-recall-and-specificity" aria-label="Precision, Recall and Specificity">Precision, Recall and Specificity</a></li><li>
@@ -281,8 +282,14 @@ March 19, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
     </details>
   </div>
   <div class="post-content">
-<p><img src="https://sudo-code7.github.io/mls-c01/assets/images/general/formulae-mls-c01.png#center" alt="Cover"></p>
+<p><img src="https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png#center" alt="Cover"></p>
 <h1 id="formulae-cheat-sheet-to-prepare-for-machine-learning-specialty">Formulae Cheat Sheet to Prepare for Machine Learning Specialty<a hidden class="anchor" aria-hidden="true" href="#formulae-cheat-sheet-to-prepare-for-machine-learning-specialty">#</a></h1>
+<h2 id="remember-how-to-write-confusion-matrix">Remember how to write Confusion Matrix<a hidden class="anchor" aria-hidden="true" href="#remember-how-to-write-confusion-matrix">#</a></h2>
+<ul>
+<li>Know how to write confusion matrix when <code>Actual</code> and <code>Predicted</code> are swapped</li>
+<li>Write down both versions of confusion matrix in a rough sheet provided as soon as you start exam</li>
+</ul>
+<p><img src="https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/confusion-matrix-formulae.png#center" alt="Confusion Matrix"></p>
 <h2 id="basic-formulae-for-classification">Basic Formulae for Classification<a hidden class="anchor" aria-hidden="true" href="#basic-formulae-for-classification">#</a></h2>
 <h3 id="precision-recall-and-specificity">Precision, Recall and Specificity<a hidden class="anchor" aria-hidden="true" href="#precision-recall-and-specificity">#</a></h3>
 
@@ -307,10 +314,68 @@ March 19, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;sudo-code
 
 <blockquote>
   <p>$$
-Precision = PPV = \frac{TP}{TP+FP} \\\\<br>
-Recall = Sensitivity = TPR = \frac{TP}{TP+FN} \\\\<br>
-Specificity = TNR = \frac{TN}{TN+FP} \\\\<br>
+Precision = Positive Prediction Value (PPV) = \frac{TP}{TP+FP} \\\\<br>
+Recall = Sensitivity = True Positive Rate (TPR) = \frac{TP}{TP+FN} \\\\<br>
+Specificity = True Negative Rate (TNR) = \frac{TN}{TN+FP} \\\\<br>
 $$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p><p><strong>Sudo Exam Tip:</strong></p>
+<ul>
+<li>How to remember above formulae ?
+<ul>
+<li>After having understood what above formulae mean, only way to quickly reproduce is to have some sort of recall :) from your memory, here is a trick, the way I remember:
+<ul>
+<li>Precision:
+<ul>
+<li><em>P</em>revision formula has all components ending with <em>P</em> i.e. Precision = TP/(TP+FP)</li>
+</ul>
+</li>
+<li>Recall:
+<ul>
+<li>Once you know <code>Precision</code>, for <code>Recall</code> just replace the FP -&gt; FN, that&rsquo;s all!</li>
+</ul>
+</li>
+<li>Specificity
+<ul>
+<li>Once you know <code>Precision</code>, for <code>Specificity</code> just replace the TP -&gt; TN, that&rsquo;s all!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
   <footer>
     <strong></strong>
     
@@ -563,6 +628,13 @@ $$</p>
   </footer>
 </blockquote>
 
+<ul>
+<li>Reference: Read this FAQ on <a href="https://www.amazonaws.cn/en/kinesis/data-streams/faqs/">Kinesis Data Streams</a>
+<ul>
+<li>Search for question <code>How do I decide the throughput of my Kinesis stream?</code></li>
+</ul>
+</li>
+</ul>
 
 </div>
   <footer class="post-footer">
