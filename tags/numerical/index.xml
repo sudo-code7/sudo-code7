@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>numerical on sudo-code</title>
+    <link>https://sudo-code7.github.io/tags/numerical/</link>
+    <description>Recent content in numerical on sudo-code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 19 Mar 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/tags/numerical/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!</title>
+      <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/formulae-reference/</link>
+      <pubDate>Fri, 19 Mar 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://sudo-code7.github.io/posts/tech/ml/mls-c01/formulae-reference/</guid>
+      <description>Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped Write down both versions of confusion matrix in a rough sheet provided as soon as you start exam  Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = Positive Prediction Value (PPV) = \frac{TP}{TP+FP} \\\\
+Recall = Sensitivity = True Positive Rate (TPR) = \frac{TP}{TP+FN} \\\\</description>
+    </item>
+    
+  </channel>
+</rss>

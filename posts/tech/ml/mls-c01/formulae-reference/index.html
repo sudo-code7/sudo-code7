@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="https://sudo-code7.github.io/css/bootstrap.css">
-<title>AWS Machine Learning Specialty: Know These Math Formulae Before Exam! | sudo-code</title>
+<title>AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions! | sudo-code</title>
 
-<meta name="keywords" content="machine, learning, sagemaker, aws, mls-c01, specialty, exam, deep, learning, training, math, formula, formulae" />
+<meta name="keywords" content="machine, learning, sagemaker, aws, mls-c01, specialty, exam, deep, learning, training, math, formula, formulae, exercise, problem, questions, numerical, solved" />
 <meta name="description" content="Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam">
 <meta name="author" content="sudo-code">
 <link rel="canonical" href="https://sudo-code7.github.io/posts/tech/ml/mls-c01/formulae-reference/" />
@@ -73,7 +73,7 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<meta property="og:title" content="AWS Machine Learning Specialty: Know These Math Formulae Before Exam!" />
+<meta property="og:title" content="AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!" />
 <meta property="og:description" content="Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://sudo-code7.github.io/posts/tech/ml/mls-c01/formulae-reference/" />
@@ -81,21 +81,21 @@ if (!doNotTrack) {
 <meta property="article:modified_time" content="2021-03-19T11:30:03+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png" />
-<meta name="twitter:title" content="AWS Machine Learning Specialty: Know These Math Formulae Before Exam!"/>
+<meta name="twitter:title" content="AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!"/>
 <meta name="twitter:description" content="Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam"/>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "AWS Machine Learning Specialty: Know These Math Formulae Before Exam!",
-  "name": "AWS Machine Learning Specialty: Know These Math Formulae Before Exam!",
+  "headline": "AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!",
+  "name": "AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!",
   "description": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped …",
   "keywords": [
-    "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "deep", "learning", "training", "math", "formula", "formulae"
+    "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "deep", "learning", "training", "math", "formula", "formulae", "exercise", "problem", "questions", "numerical", "solved"
   ],
-  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped Write down both versions of confusion matrix in a rough sheet provided as soon as you start exam  Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = Positive Prediction Value (PPV) = \\frac{TP}{TP+FP} \\\\\\\\\nRecall = Sensitivity = True Positive Rate (TPR) = \\frac{TP}{TP+FN} \\\\\\\\\nSpecificity = True Negative Rate (TNR) = \\frac{TN}{TN+FP} \\\\\\\\\n$$\n     Sudo Exam Tip:\n How to remember above formulae ?  After having understood what above formulae mean, only way to quickly reproduce is to have some sort of recall :) from your memory, here is a trick, the way I remember:  Precision:  Precision formula has all components ending with P i.e. Precision = TP/(TP+FP)   Recall:  Once you know Precision, for Recall just replace the FP - FN, that’s all!   Specificity  Once you know Precision, for Specificity just replace the TP - TN, that’s all!            F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} \\\\\\\\ $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} \\\\\\\\ $$\n    TF-IDF: Term Frequency - Inverse Document Frequency  Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n$$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = \\frac{1}{df(t)} $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ $$\n    Kinesis Shards Calculation  Number of shards required for a Kinesis stream is a precisely calculation based on:  Record size Write Bandwidth (into kinesis stream) Read Bandwidth (out of kinesis stream)   The number of shards = shards is calculated as   $$ shards = max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\\\\\\\\nWhere,\\\\\n\\text{Write Bandwidth in KB} = \\text{Average Record Size in KB} * \\text{Records Per Second} \\\\\n\\text{Read Bandwidth in KB} = \\text{Write Bandwidth in KB} * \\text{Number of Consumers} $$\n     Reference: Read this FAQ on Kinesis Data Streams  Search for question How do I decide the throughput of my Kinesis stream?    ",
-  "wordCount" : "485",
+  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped Write down both versions of confusion matrix in a rough sheet provided as soon as you start exam  Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = Positive Prediction Value (PPV) = \\frac{TP}{TP+FP} \\\\\\\\\nRecall = Sensitivity = True Positive Rate (TPR) = \\frac{TP}{TP+FN} \\\\\\\\\nSpecificity = True Negative Rate (TNR) = \\frac{TN}{TN+FP} \\\\\\\\\n$$\n     Sudo Exam Tip:\n How to remember above formulae ?  After having understood what above formulae mean, only way to quickly reproduce is to have some sort of recall :) from your memory, here is a trick, the way I remember:  Precision:  Precision formula has all components ending with P i.e. Precision = TP/(TP+FP)   Recall:  Once you know Precision, for Recall just replace the FP - FN, that’s all!   Specificity  Once you know Precision, for Specificity just replace the TP - TN, that’s all!            F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} \\\\\\\\ $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} \\\\\\\\ $$\n    Exercise TF-IDF: Term Frequency - Inverse Document Frequency  In information retrieval, tf–idf, TF*IDF, or TFIDF, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus  tf–idf is one of the most popular term-weighting schemes today Read more on [Wikipedia]{https://en.wikipedia.org/wiki/Tf%E2%80%93idf}   Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n$$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = log(\\frac{1}{df(t)}) $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ $$\n    TF-IDF Exercise  TF-IDF tells us the significance of a term in a document Let’s consider few documents:  Document 1 - d1: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The learning experience is very good. Machine learning specialty preparation is made easy Document 2 - d2: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The blogs are very informative and to the point. The blogs take a new approach Document 3 - d3: Sudo Code blogs are very helpful for MLS-C01 exam   The question we ask is: How significant is the term learning in all documents The answer is to calculate TF-IDF  Let’s look at an example exercise  $$ \\\\\ntf(learning,d_{1}) \\\\\n= \\frac {\\text{No. of times term learning occurs in } d_{1}} {\\text{No. of words in } d_{1} } \\\\\n= \\frac{3}{28} = 0.11 \\\\\\\\\n$$ $$ tf(learning,d_{2}) \\\\\n= \\frac {\\text{No. of times term learning occurs in } d_{2}} {\\text{No. of words in } d_{2} } \\\\\n= \\frac{1}{30} = 0.03 \\\\\\\\\n$$ $$ tf(learning,d_{3}) \\\\\n= \\frac {\\text{No. of times term learning occurs in } d_{3}} {\\text{No. of words in } d_{3} } \\\\\n= \\frac{0}{9} = 0 \\\\\\\\\n$$ $$ df(learning) \\\\\n= \\frac {\\text{No. of documents with term learning}} {\\text{No. of documents }} \\\\\n= \\frac{2}{3} \\\\\\\\\n$$ $$ idf(learning) \\\\\n= log(\\frac{1}{df(learning)}) \\\\\n= log(\\frac{3}{2}) \\\\\n= log(1.5) = 0.176 \\\\\\\\\n$$ $$ tfidf(learning, d_{1}) \\\\\n= tf(learning, d_{1}) * idf(learning) \\\\\n= 0.11 * 0.176 = 0.01936 \\\\\\\\\n$$ $$ tfidf(learning, d_{2}) \\\\\n= tf(learning, d_{2}) * idf(learning) \\\\\n= 0.03 * 0.176 = 0.00528 \\\\\\\\\n$$ $$ tfidf(learning, d_{3}) \\\\\n= tf(learning, d_{3}) * idf(learning) \\\\\n= 0 * 0.176 = 0 \\\\\\\\\n$$\n    Finally  tf-idf of term learning is largest for document 1, hence the term is more significant in document 1 with weight 0.0193 The next document is document 2 with weight 0.0058 document 3 has no significance with weight 0  Kinesis Shards Calculation  Number of shards required for a Kinesis stream is a precisely calculation based on:  Record size Write Bandwidth (into kinesis stream) Read Bandwidth (out of kinesis stream)   The number of shards = shards is calculated as   $$ shards = max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\\\\\\\\nWhere,\\\\\n\\text{Write Bandwidth in KB} = \\text{Average Record Size in KB} * \\text{Records Per Second} \\\\\n\\text{Read Bandwidth in KB} = \\text{Write Bandwidth in KB} * \\text{Number of Consumers} $$\n     Reference: Read this FAQ on Kinesis Data Streams  Search for question How do I decide the throughput of my Kinesis stream?    Kinesis shard calculation example  You are designing a system where Kinesis data streams are to be used for realtime processing of data produced by IoT systems The average record size produced by IoT devices are 500KB in size The data records are written to Kinesis stream by IoT devices using PutRecord API directly at a rate of 120 records per minute There are 7 Lambda instances that will read from the Kinesis stream and process the data, and finally store them to DynamoDB How many shards will the Kinesis stream need to support the above described system ?  Solution  Remember to convert RPM Records Per Minute to RPS Records Per Second   $$ 120 \\text{ RPM} = \\frac{120}{60} = 2 \\text{ RPS} \\\\\n$$ $$ \\text{Write Bandwidth in KB} \\\\\n= \\text{Average Record Size in KB} * \\text{Records Per Second} \\\\\n= 500 * 2 \\\\\n= 1000 KB \\\\\n$$ $$ \\text{Read Bandwidth in KB} \\\\\n= \\text{Write Bandwidth in KB} * \\text{Number of Consumers} \\\\\n= 1000 * 7 \\\\\n= 7000 KB \\\\\n$$ $$ shards \\\\\n= max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\\\\n= max(\\frac{1000}{1000},\\frac{7000}{2000}) \\\\\n= max(1, 3.5) = 3.5 \\approx 4 $$\n    Answer  As number of shards cannot be a fraction, round up to the next integer i.e 4 shards are needed to support the demands of the system  ",
+  "wordCount" : "1096",
   "inLanguage": "en",
   "image":"https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png","datePublished": "2021-03-19T11:30:03Z",
   "dateModified": "2021-03-19T11:30:03Z",
@@ -131,8 +131,8 @@ if (!doNotTrack) {
          "@id": "https:\/\/sudo-code7.github.io\/"
     },
     "articleSection" : "posts",
-    "name" : "AWS Machine Learning Specialty: Know These Math Formulae Before Exam!",
-    "headline" : "AWS Machine Learning Specialty: Know These Math Formulae Before Exam!",
+    "name" : "AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!",
+    "headline" : "AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!",
     "description" : "Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam",
     "inLanguage" : "en-US",
     "author" : {
@@ -163,8 +163,8 @@ if (!doNotTrack) {
     "datePublished": "2021-03-19 11:30:03 \u002b0000 \u002b0000",
     "dateModified" : "2021-03-19 11:30:03 \u002b0000 \u002b0000",
     "url" : "https:\/\/sudo-code7.github.io\/posts\/tech\/ml\/mls-c01\/formulae-reference\/",
-    "wordCount" : "485",
-    "keywords" : [ "machine","learning","sagemaker","aws","mls-c01","specialty","exam","deep","learning","training","math","formula","formulae","Blog" ],
+    "wordCount" : "1096",
+    "keywords" : [ "machine","learning","sagemaker","aws","mls-c01","specialty","exam","deep","learning","training","math","formula","formulae","exercise","problem","questions","numerical","solved","Blog" ],
     "image": "https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png"
 }
 </script>
@@ -249,14 +249,14 @@ if (!doNotTrack) {
       <a href="https://sudo-code7.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://sudo-code7.github.io/posts/">Posts</a>
     </div>
     <h1 class="post-title">
-      AWS Machine Learning Specialty: Know These Math Formulae Before Exam!
+      AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!
     </h1>
     <div class="post-description">
       Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam
     </div>
     <div class="post-meta">
 
-March 19, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;sudo-code
+March 19, 2021&nbsp;·&nbsp;6 min&nbsp;·&nbsp;sudo-code
 
     </div>
   </header> 
@@ -273,10 +273,23 @@ March 19, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;sudo-code
         <a href="#basic-formulae-for-classification" aria-label="Basic Formulae for Classification">Basic Formulae for Classification</a><ul>
             <li>
         <a href="#precision-recall-and-specificity" aria-label="Precision, Recall and Specificity">Precision, Recall and Specificity</a></li><li>
-        <a href="#f1-score" aria-label="F1-Score">F1-Score</a></li></ul>
+        <a href="#f1-score" aria-label="F1-Score">F1-Score</a></li><li>
+        <a href="#exercise" aria-label="Exercise">Exercise</a></li></ul>
     </li><li>
         <a href="#tf-idf-term-frequency---inverse-document-frequency" aria-label="TF-IDF: Term Frequency - Inverse Document Frequency">TF-IDF: Term Frequency - Inverse Document Frequency</a></li><li>
-        <a href="#kinesis-shards-calculation" aria-label="Kinesis Shards Calculation">Kinesis Shards Calculation</a></li></ul>
+        <a href="#tf-idf-exercise" aria-label="TF-IDF Exercise">TF-IDF Exercise</a><ul>
+            <li>
+        <a href="#lets-look-at-an-example-exercise" aria-label="Let&amp;rsquo;s look at an example exercise">Let&rsquo;s look at an example exercise</a></li><li>
+        <a href="#finally" aria-label="Finally">Finally</a></li></ul>
+    </li><li>
+        <a href="#kinesis-shards-calculation" aria-label="Kinesis Shards Calculation">Kinesis Shards Calculation</a><ul>
+            <li>
+        <a href="#kinesis-shard-calculation-example" aria-label="Kinesis shard calculation example">Kinesis shard calculation example</a><ul>
+            <li>
+        <a href="#solution" aria-label="Solution">Solution</a></li><li>
+        <a href="#answer" aria-label="Answer">Answer</a></li></ul>
+</li></ul>
+</li></ul>
 </li></ul>
       </div>
     </details>
@@ -421,8 +434,16 @@ $$</p>
   </footer>
 </blockquote>
 
+<h3 id="exercise">Exercise<a hidden class="anchor" aria-hidden="true" href="#exercise">#</a></h3>
+<p><img src="https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/exercise-precision-recall" alt="precision recall exercise"></p>
 <h2 id="tf-idf-term-frequency---inverse-document-frequency">TF-IDF: Term Frequency - Inverse Document Frequency<a hidden class="anchor" aria-hidden="true" href="#tf-idf-term-frequency---inverse-document-frequency">#</a></h2>
 <ul>
+<li>In information retrieval, <code>tf–idf</code>, <code>TF*IDF</code>, or <code>TFIDF</code>, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus
+<ul>
+<li><code>tf–idf</code> is one of the most popular term-weighting schemes today</li>
+<li>Read more on [Wikipedia]{https://en.wikipedia.org/wiki/Tf%E2%80%93idf}</li>
+</ul>
+</li>
 <li>Term frequency (tf) of a <code>term</code> is calculated over all <code>n</code> documents. If <code>tf</code> is to be calculated on many terms, the process is repeated again on all <code>n</code> documents</li>
 </ul>
 
@@ -524,7 +545,7 @@ $$</p>
 
 <blockquote>
   <p>$$
-idf(t) = \frac{1}{df(t)}
+idf(t) = log(\frac{1}{df(t)})
 $$</p>
   <footer>
     <strong></strong>
@@ -580,6 +601,98 @@ $$</p>
   </footer>
 </blockquote>
 
+<h2 id="tf-idf-exercise">TF-IDF Exercise<a hidden class="anchor" aria-hidden="true" href="#tf-idf-exercise">#</a></h2>
+<ul>
+<li>TF-IDF tells us the significance of a term in a document</li>
+<li>Let&rsquo;s consider few documents:
+<ul>
+<li><code>Document 1 - d1</code>: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The learning experience is very good. Machine learning specialty preparation is made easy</li>
+<li><code>Document 2 - d2</code>: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The blogs are very informative and to the point. The blogs take a new approach</li>
+<li><code>Document 3 - d3</code>: Sudo Code blogs are very helpful for MLS-C01 exam</li>
+</ul>
+</li>
+<li>The question we ask is: How significant is the term <code>learning</code> in all documents</li>
+<li>The answer is to calculate TF-IDF</li>
+</ul>
+<h3 id="lets-look-at-an-example-exercise">Let&rsquo;s look at an example exercise<a hidden class="anchor" aria-hidden="true" href="#lets-look-at-an-example-exercise">#</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$  \\<br>
+tf(learning,d_{1}) \\<br>
+= \frac {\text{No. of times term learning occurs in } d_{1}} {\text{No. of words in }  d_{1} } \\<br>
+= \frac{3}{28} = 0.11 \\\\<br>
+$$
+$$
+tf(learning,d_{2}) \\<br>
+= \frac {\text{No. of times term learning occurs in } d_{2}} {\text{No. of words in }  d_{2} } \\<br>
+= \frac{1}{30} = 0.03 \\\\<br>
+$$
+$$
+tf(learning,d_{3}) \\<br>
+= \frac {\text{No. of times term learning occurs in } d_{3}} {\text{No. of words in }  d_{3} } \\<br>
+= \frac{0}{9} = 0 \\\\<br>
+$$
+$$
+df(learning) \\<br>
+= \frac {\text{No. of documents with term learning}} {\text{No. of documents }} \\<br>
+= \frac{2}{3}  \\\\<br>
+$$
+$$
+idf(learning) \\<br>
+= log(\frac{1}{df(learning)}) \\<br>
+= log(\frac{3}{2}) \\<br>
+= log(1.5) = 0.176 \\\\<br>
+$$
+$$
+tfidf(learning, d_{1}) \\<br>
+= tf(learning, d_{1}) * idf(learning) \\<br>
+= 0.11 * 0.176 = 0.01936 \\\\<br>
+$$
+$$
+tfidf(learning, d_{2}) \\<br>
+= tf(learning, d_{2}) * idf(learning) \\<br>
+= 0.03 * 0.176 = 0.00528 \\\\<br>
+$$
+$$
+tfidf(learning, d_{3}) \\<br>
+= tf(learning, d_{3}) * idf(learning) \\<br>
+= 0 * 0.176 = 0 \\\\<br>
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<h3 id="finally">Finally<a hidden class="anchor" aria-hidden="true" href="#finally">#</a></h3>
+<ul>
+<li>tf-idf of term <code>learning</code> is largest for <code>document 1</code>, hence the term is more significant in <code>document 1</code> with weight 0.0193</li>
+<li>The next document is <code>document 2</code> with weight 0.0058</li>
+<li><code>document 3</code> has no significance with weight 0</li>
+</ul>
 <h2 id="kinesis-shards-calculation">Kinesis Shards Calculation<a hidden class="anchor" aria-hidden="true" href="#kinesis-shards-calculation">#</a></h2>
 <ul>
 <li>Number of shards required for a <code>Kinesis</code> stream is a precisely calculation based on:
@@ -635,6 +748,75 @@ $$</p>
 </ul>
 </li>
 </ul>
+<h3 id="kinesis-shard-calculation-example">Kinesis shard calculation example<a hidden class="anchor" aria-hidden="true" href="#kinesis-shard-calculation-example">#</a></h3>
+<ul>
+<li>You are designing a system where Kinesis data streams are to be used for realtime processing of data produced by IoT systems</li>
+<li>The average record size produced by IoT devices are 500KB in size</li>
+<li>The data records are written to Kinesis stream by IoT devices using <code>PutRecord</code> API directly at a rate of 120 records per minute</li>
+<li>There are 7 Lambda instances that will read from the Kinesis stream and process the data, and finally store them to DynamoDB</li>
+<li>How many shards will the Kinesis stream need to support the above described system ?</li>
+</ul>
+<h4 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h4>
+<ul>
+<li>Remember to convert <code>RPM</code> Records Per Minute to <code>RPS</code> Records Per Second</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
+120 \text{ RPM} = \frac{120}{60} = 2 \text{ RPS} \\<br>
+$$
+$$
+\text{Write Bandwidth in KB} \\<br>
+= \text{Average Record Size in KB} * \text{Records Per Second} \\<br>
+= 500 * 2 \\<br>
+= 1000 KB \\<br>
+$$
+$$
+\text{Read Bandwidth in KB}  \\<br>
+= \text{Write Bandwidth in KB} * \text{Number of Consumers} \\<br>
+= 1000 * 7 \\<br>
+= 7000 KB \\<br>
+$$
+$$
+shards \\<br>
+= max(\frac{\text{Write bandwidth in KB}}{1000},\frac{\text{Read bandwidth in KB}}{2000}) \\<br>
+= max(\frac{1000}{1000},\frac{7000}{2000}) \\<br>
+= max(1, 3.5)
+= 3.5 \approx 4
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<h4 id="answer">Answer<a hidden class="anchor" aria-hidden="true" href="#answer">#</a></h4>
+<ul>
+<li>As number of <code>shards</code> cannot be a fraction, round up to the next integer i.e <code>4 shards</code> are needed to support the demands of the system</li>
+</ul>
 
 </div>
   <footer class="post-footer">
@@ -651,6 +833,11 @@ $$</p>
       <li><a href="https://sudo-code7.github.io/tags/math/">math</a></li>
       <li><a href="https://sudo-code7.github.io/tags/formula/">formula</a></li>
       <li><a href="https://sudo-code7.github.io/tags/formulae/">formulae</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/exercise/">exercise</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/problem/">problem</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/questions/">questions</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/numerical/">numerical</a></li>
+      <li><a href="https://sudo-code7.github.io/tags/solved/">solved</a></li>
     </ul>
     <nav class="paginav">
       <a class="next" href="https://sudo-code7.github.io/posts/tech/ml/mls-c01/softmax-vs-sigmoid-activation/">
@@ -666,43 +853,43 @@ $$</p>
 
 
 <div class="share-buttons">
-    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam! on twitter"
-        href="https://twitter.com/intent/tweet/?text=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%21&amp;url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f&amp;hashtags=machine%2clearning%2csagemaker%2caws%2cmls-c01%2cspecialty%2cexam%2cdeep%2clearning%2ctraining%2cmath%2cformula%2cformulae">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions! on twitter"
+        href="https://twitter.com/intent/tweet/?text=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%20with%20Solved%20Numerical%20Questions%21&amp;url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f&amp;hashtags=machine%2clearning%2csagemaker%2caws%2cmls-c01%2cspecialty%2cexam%2cdeep%2clearning%2ctraining%2cmath%2cformula%2cformulae%2cexercise%2cproblem%2cquestions%2cnumerical%2csolved">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam! on linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f&amp;title=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%21&amp;summary=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%21&amp;source=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions! on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f&amp;title=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%20with%20Solved%20Numerical%20Questions%21&amp;summary=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%20with%20Solved%20Numerical%20Questions%21&amp;source=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam! on reddit"
-        href="https://reddit.com/submit?url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f&title=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%21">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions! on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f&title=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%20with%20Solved%20Numerical%20Questions%21">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam! on facebook"
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions! on facebook"
         href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam! on whatsapp"
-        href="https://api.whatsapp.com/send?text=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%21%20-%20https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions! on whatsapp"
+        href="https://api.whatsapp.com/send?text=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%20with%20Solved%20Numerical%20Questions%21%20-%20https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam! on telegram"
-        href="https://telegram.me/share/url?text=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%21&amp;url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions! on telegram"
+        href="https://telegram.me/share/url?text=AWS%20Machine%20Learning%20Specialty%3a%20Know%20These%20Math%20Formulae%20Before%20Exam%20with%20Solved%20Numerical%20Questions%21&amp;url=https%3a%2f%2fsudo-code7.github.io%2fposts%2ftech%2fml%2fmls-c01%2fformulae-reference%2f">
         <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
             <path
                 d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
