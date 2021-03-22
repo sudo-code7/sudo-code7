@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sudo-code</title>
+    <title>Sudo Code Home Page on sudo-code</title>
     <link>https://sudo-code7.github.io/</link>
-    <description>Recent content on sudo-code</description>
+    <description>Recent content in Sudo Code Home Page on sudo-code</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 19 Mar 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!</title>
       <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/formulae-reference/</link>
