@@ -1,0 +1,29 @@
+---
+title: "Sudo Code Machine Learning Articles"
+date: 2021-03-21T11:30:03+00:00
+tags: ["machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "architect", "professional", "exam", "hyperparameter", "parameter", "effect", "deep", "learning", "tuning", "impact", "training"]
+author: "sudo-code"
+showToc: false
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
+description: "A collection of articles to learn Machine Learning and focus on passing AWS Machine Learning Specialty Exam MLS-C01"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+searchHidden: true
+isindex: true
+applausebutton: false
+# cover:
+#     image: "mls-c01/assets/images/general/aws-cert-back.png" # image path/url
+#     alt: "AWS Machine Learning Specialty" # alt text
+#     caption: "AWS Machine Learning Specialty" # display caption under cover
+#     relative: false # when using page bundles set this to true
+#     hidden: true # only hide on current single page
+---
+![Cover](/mls-c01/assets/images/general/aws-cert-back.png#center)
+
+# Make Machines Learn using Machine Learning
+* The focus is on preparing for MLS-C01 Machine Learning Specialty Exam from AWS
+* All the articles here help in preparing for the exam and pass in the first attempt.
