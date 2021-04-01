@@ -29,15 +29,17 @@
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.81.0" />
 
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"></script>
 <script>
-    MathJax = {
-        chtml: {
-            displayAlign: "left"
-        }
-    };
-</script>
-<script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            fleqn: true
+        });
+    });
 </script>
 
 <script type="application/javascript">
@@ -71,8 +73,8 @@ if (!doNotTrack) {
   "keywords": [
     "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "deep", "learning", "training", "math", "formula", "formulae", "exercise", "problem", "questions", "numerical", "solved"
   ],
-  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped Write down both versions of confusion matrix in a rough sheet provided as soon as you start exam  Basic Formulae for Classification Precision, Recall and Specificity  $$ \\displaylines{ Precision = Positive Prediction Value (PPV) = \\frac{TP}{TP+FP} \\\\\nRecall = Sensitivity = True Positive Rate (TPR) = \\frac{TP}{TP+FN} \\\\\nSpecificity = True Negative Rate (TNR) = \\frac{TN}{TN+FP} \\\\\n} $$\n     Sudo Exam Tip:\n How to remember above formulae ?  After having understood what above formulae mean, only way to quickly reproduce is to have some sort of recall :) from your memory, here is a trick, the way I remember:  Precision:  Precision formula has all components ending with P i.e. Precision = TP/(TP+FP)   Recall:  Once you know Precision, for Recall just replace the FP - FN, that’s all!   Specificity  Once you know Precision, for Specificity just replace the TP - TN, that’s all!            F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} $$\n    Sample Question and Solution TF-IDF: Term Frequency - Inverse Document Frequency  In information retrieval, tf–idf, TF*IDF, or TFIDF, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus  tf–idf is one of the most popular term-weighting schemes today Read more on [Wikipedia]{https://en.wikipedia.org/wiki/Tf%E2%80%93idf}   Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ \\displaylines{ tf(t, d_{n}) \\\\ = {\\text{Term frequency of term } t \\text{ in } document_{n} } \\\\ = \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\\\\n} $$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ \\displaylines{ df(t) = {\\text{Document frequency of term } t \\text{ in all documents} } \\\\\n= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} } $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = log(\\frac{1}{df(t)}) $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ \\displaylines{ tf(t, d_{n}) * idf(t) \\\\\\\\ {\\text{Which translates to every term as }} \\\\ tf(t, d_{1}) * idf(t) \\\\ tf(t, d_{2}) * idf(t) \\\\ tf(t, d_{3}) * idf(t) \\\\ tf(t, d_{4}) * idf(t) \\\\ {\\text{so on … till …}} \\\\ tf(t, d_{n}) * idf(t) \\\\ } $$\n    TF-IDF Exercise  TF-IDF tells us the significance of a term in a document Let’s consider few documents:  Document 1 - d1: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The learning experience is very good. Machine learning specialty preparation is made easy Document 2 - d2: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The blogs are very informative and to the point. The blogs take a new approach Document 3 - d3: Sudo Code blogs are very helpful for MLS-C01 exam   The question we ask is: How significant is the term learning in all documents The answer is to calculate TF-IDF  Sample Question and Solution  $$ \\displaylines{ tf(learning,d_{1}) \\\\\n= \\frac {\\text{No. of times term learning occurs in } d_{1}} {\\text{No. of words in } d_{1} } \\\\\n= \\frac{3}{28} = 0.11 } $$ $$ \\displaylines{ tf(learning,d_{2}) \\\\\n= \\frac {\\text{No. of times term learning occurs in } d_{2}} {\\text{No. of words in } d_{2} } \\\\\n= \\frac{1}{30} = 0.03 } $$ $$ \\displaylines{ tf(learning,d_{3}) \\\\\n= \\frac {\\text{No. of times term learning occurs in } d_{3}} {\\text{No. of words in } d_{3} } \\\\\n= \\frac{0}{9} = 0 } $$ $$ \\displaylines{ df(learning) \\\\\n= \\frac {\\text{No. of documents with term learning}} {\\text{No. of documents }} \\\\\n= \\frac{2}{3}\n} $$ $$ \\displaylines{ idf(learning) \\\\\n= log(\\frac{1}{df(learning)}) \\\\\n= log(\\frac{3}{2}) \\\\\n= log(1.5) = 0.176 } $$ $$ \\displaylines{ tfidf(learning, d_{1}) \\\\\n= tf(learning, d_{1}) * idf(learning) \\\\\n= 0.11 * 0.176 = 0.01936 } $$ $$ \\displaylines{ tfidf(learning, d_{2}) \\\\\n= tf(learning, d_{2}) * idf(learning) \\\\\n= 0.03 * 0.176 = 0.00528 } $$ $$ \\displaylines{ tfidf(learning, d_{3}) \\\\\n= tf(learning, d_{3}) * idf(learning) \\\\\n= 0 * 0.176 = 0 } $$\n    Interpretation of TF-IDF Values  tf-idf of term learning is largest for document 1, hence the term is more significant in document 1 with weight 0.0193 The next document is document 2 with weight 0.0058 document 3 has no significance with weight 0  Kinesis Shards Calculation  Number of shards required for a Kinesis stream is a precisely calculation based on:  Record size Write Bandwidth (into kinesis stream) Read Bandwidth (out of kinesis stream)   The number of shards = shards is calculated as   $$ \\displaylines{ shards = max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\\\\\\\\nWhere,\\\\\n\\text{Write Bandwidth in KB} = \\text{Average Record Size in KB} * \\text{Records Per Second} \\\\\n\\text{Read Bandwidth in KB} = \\text{Write Bandwidth in KB} * \\text{Number of Consumers} } $$\n     Reference: Read this FAQ on Kinesis Data Streams  Search for question How do I decide the throughput of my Kinesis stream?    Kinesis shard calculation example  You are designing a system where Kinesis data streams are to be used for realtime processing of data produced by IoT systems The average record size produced by IoT devices are 500KB in size The data records are written to Kinesis stream by IoT devices using PutRecord API directly at a rate of 120 records per minute There are 7 Lambda instances that will read from the Kinesis stream and process the data, and finally store them to DynamoDB How many shards will the Kinesis stream need to support the above described system ?  Solution  Remember to convert RPM Records Per Minute to RPS Records Per Second   $$ 120 \\text{ RPM} = \\frac{120}{60} = 2 \\text{ RPS} \\\\\n$$ $$ \\displaylines{ \\text{Write Bandwidth in KB} \\\\\n= \\text{Average Record Size in KB} * \\text{Records Per Second} \\\\\n= 500 * 2 \\\\\n= 1000 KB } $$ $$ \\displaylines{ \\text{Read Bandwidth in KB} \\\\\n= \\text{Write Bandwidth in KB} * \\text{Number of Consumers} \\\\\n= 1000 * 7 \\\\\n= 7000 KB } $$ $$ \\displaylines{ shards \\\\\n= max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\\\\n= max(\\frac{1000}{1000},\\frac{7000}{2000}) \\\\\n= max(1, 3.5) = 3.5 \\approx 4 } $$\n    Answer  As number of shards cannot be a fraction, round up to the next integer i.e 4 shards are needed to support the demands of the system  ",
-  "wordCount" : "1119",
+  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped Write down both versions of confusion matrix in a rough sheet provided as soon as you start exam  Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = Positive Prediction Value (PPV) = \\frac{TP}{TP+FP} $$ $$ Recall = Sensitivity = True Positive Rate (TPR) = \\frac{TP}{TP+FN} $$ $$ Specificity = True Negative Rate (TNR) = \\frac{TN}{TN+FP} $$\n     Sudo Exam Tip:\n How to remember above formulae ?  After having understood what above formulae mean, only way to quickly reproduce is to have some sort of recall :) from your memory, here is a trick, the way I remember:  Precision:  Precision formula has all components ending with P i.e. Precision = TP/(TP+FP)   Recall:  Once you know Precision, for Recall just replace the FP - FN, that’s all!   Specificity  Once you know Precision, for Specificity just replace the TP - TN, that’s all!            F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} $$\n    Sample Question and Solution TF-IDF: Term Frequency - Inverse Document Frequency  In information retrieval, tf–idf, TF*IDF, or TFIDF, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus  tf–idf is one of the most popular term-weighting schemes today Read more on [Wikipedia]{https://en.wikipedia.org/wiki/Tf%E2%80%93idf}   Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ \\begin{aligned} tf(t, d_{n}) \\cr \u0026= {\\text{Term frequency of term } t \\text{ in } document_{n} } \\cr \u0026= \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\cr \\end{aligned} $$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ \\begin{aligned} df(t) \\cr \u0026= {\\text{Document frequency of term } t \\text{ in all documents} } \\cr \u0026= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} \\end{aligned} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = log(\\frac{1}{df(t)}) $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ \\begin{aligned} \u0026tf(t, d_{n}) * idf(t) \\cr\\cr \u0026{\\text{Which translates to every term as }} \\cr \u0026tf(t, d_{1}) * idf(t) \\cr \u0026tf(t, d_{2}) * idf(t) \\cr \u0026tf(t, d_{3}) * idf(t) \\cr \u0026tf(t, d_{4}) * idf(t) \\cr \u0026{\\text{so on … till …}} \\cr \u0026tf(t, d_{n}) * idf(t) \\cr \\end{aligned} $$\n    TF-IDF Exercise  TF-IDF tells us the significance of a term in a document Let’s consider few documents:  Document 1 - d1: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The learning experience is very good. Machine learning specialty preparation is made easy Document 2 - d2: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The blogs are very informative and to the point. The blogs take a new approach Document 3 - d3: Sudo Code blogs are very helpful for MLS-C01 exam   The question we ask is: How significant is the term learning in all documents The answer is to calculate TF-IDF  Sample Question and Solution  $$ \\begin{aligned} tf(learning,d_{1}) \\cr \u0026= \\frac {\\text{No. of times term learning occurs in } d_{1}} {\\text{No. of words in } d_{1} } \\cr \u0026= \\frac{3}{28} = 0.11 \\cr \\cr tf(learning,d_{2}) \\cr \u0026= \\frac {\\text{No. of times term learning occurs in } d_{2}} {\\text{No. of words in } d_{2} } \\cr \u0026= \\frac{1}{30} = 0.03 \\cr \\cr tf(learning,d_{3}) \\cr \u0026= \\frac {\\text{No. of times term learning occurs in } d_{3}} {\\text{No. of words in } d_{3} } \\cr \u0026= \\frac{0}{9} = 0 \\cr \\cr df(learning) \\cr \u0026= \\frac {\\text{No. of documents with term learning}} {\\text{No. of documents }} \\cr \u0026= \\frac{2}{3} \\cr \\cr idf(learning) \\cr \u0026= log(\\frac{1}{df(learning)}) \\cr \u0026= log(\\frac{3}{2}) \\cr \u0026= log(1.5) = 0.176 \\cr \\cr tfidf(learning, d_{1}) \\cr \u0026= tf(learning, d_{1}) * idf(learning) \\cr \u0026= 0.11 * 0.176 = 0.01936 \\cr \\cr tfidf(learning, d_{2}) \\cr \u0026= tf(learning, d_{2}) * idf(learning) \\cr \u0026= 0.03 * 0.176 = 0.00528 \\cr \\cr tfidf(learning, d_{3}) \\cr \u0026= tf(learning, d_{3}) * idf(learning) \\cr \u0026= 0 * 0.176 = 0 \\cr \\end{aligned} $$\n    Interpretation of TF-IDF Values  tf-idf of term learning is largest for document 1, hence the term is more significant in document 1 with weight 0.0193 The next document is document 2 with weight 0.0058 document 3 has no significance with weight 0  Kinesis Shards Calculation  Number of shards required for a Kinesis stream is a precisely calculation based on:  Record size Write Bandwidth (into kinesis stream) Read Bandwidth (out of kinesis stream)   The number of shards = shards is calculated as   $$ \\begin{aligned} shards \\cr \u0026= max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\cr \\cr Where,\\cr \u0026\\text{Write Bandwidth in KB} = \\text{Average Record Size in KB} * \\text{Records Per Second} \\cr \u0026\\text{Read Bandwidth in KB} = \\text{Write Bandwidth in KB} * \\text{Number of Consumers} \\end{aligned} $$\n     Reference: Read this FAQ on Kinesis Data Streams  Search for question How do I decide the throughput of my Kinesis stream?    Kinesis shard calculation example  You are designing a system where Kinesis data streams are to be used for realtime processing of data produced by IoT systems The average record size produced by IoT devices are 500KB in size The data records are written to Kinesis stream by IoT devices using PutRecord API directly at a rate of 120 records per minute There are 7 Lambda instances that will read from the Kinesis stream and process the data, and finally store them to DynamoDB How many shards will the Kinesis stream need to support the above described system ?  Solution  Remember to convert RPM Records Per Minute to RPS Records Per Second   $$ 120 \\text{ RPM} = \\frac{120}{60} = 2 \\text{ RPS} $$ $$ \\begin{aligned} \\text{Write Bandwidth in KB} \\cr \u0026= \\text{Average Record Size in KB} * \\text{Records Per Second} \\cr \u0026= 500 * 2 \\cr \u0026= 1000 KB \\end{aligned} $$ $$ \\begin{aligned} \\text{Read Bandwidth in KB} \\cr \u0026= \\text{Write Bandwidth in KB} * \\text{Number of Consumers} \\cr \u0026= 1000 * 7 \\cr \u0026= 7000 KB \\end{aligned} $$ $$ \\begin{aligned} shards \\cr \u0026= max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\cr \u0026= max(\\frac{1000}{1000},\\frac{7000}{2000}) \\cr \u0026= max(1, 3.5) \\cr \u0026= 3.5 \\approx 4 \\end{aligned} $$\n    Answer  As number of shards cannot be a fraction, round up to the next integer i.e 4 shards are needed to support the demands of the system  ",
+  "wordCount" : "1108",
   "inLanguage": "en",
   "image":"https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png","datePublished": "2021-03-19T11:30:03Z",
   "dateModified": "2021-03-19T11:30:03Z",
@@ -140,7 +142,7 @@ if (!doNotTrack) {
     "datePublished": "2021-03-19 11:30:03 \u002b0000 \u002b0000",
     "dateModified" : "2021-03-19 11:30:03 \u002b0000 \u002b0000",
     "url" : "https:\/\/sudo-code7.github.io\/posts\/tech\/ml\/mls-c01\/formulae-reference\/",
-    "wordCount" : "1119",
+    "wordCount" : "1108",
     "keywords" : [ "machine","learning","sagemaker","aws","mls-c01","specialty","exam","deep","learning","training","math","formula","formulae","exercise","problem","questions","numerical","solved","Blog" ],
     "image": "https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png"
 }
@@ -303,13 +305,9 @@ March 19, 2021&nbsp;·&nbsp;6 min&nbsp;·&nbsp;sudo-code
 
 
 <blockquote>
-  <p>$$
-\displaylines{
-Precision = Positive Prediction Value (PPV) = \frac{TP}{TP+FP} \\<br>
-Recall = Sensitivity = True Positive Rate (TPR) = \frac{TP}{TP+FN} \\<br>
-Specificity = True Negative Rate (TNR) = \frac{TN}{TN+FP} \\<br>
-}
-$$</p>
+  <p>$$ Precision = Positive Prediction Value (PPV) = \frac{TP}{TP+FP} $$
+$$ Recall = Sensitivity = True Positive Rate (TPR) = \frac{TP}{TP+FN} $$
+$$ Specificity = True Negative Rate (TNR) = \frac{TN}{TN+FP} $$</p>
   <footer>
     <strong></strong>
     
@@ -447,11 +445,11 @@ $$</p>
 
 <blockquote>
   <p>$$
-\displaylines{
-tf(t, d_{n}) \\
-= {\text{Term frequency of term } t \text{ in } document_{n} }  \\
-= \frac{\text{Number of times }t\text{ occurs in } d_{n}}{\text{Number of words in }d_{n}} \\<br>
-}
+\begin{aligned}
+tf(t, d_{n}) \cr
+&amp;= {\text{Term frequency of term } t \text{ in } document_{n} }  \cr
+&amp;= \frac{\text{Number of times }t\text{ occurs in } d_{n}}{\text{Number of words in }d_{n}} \cr
+\end{aligned}
 $$</p>
   <footer>
     <strong></strong>
@@ -488,10 +486,11 @@ $$</p>
 
 <blockquote>
   <p>$$
-\displaylines{
-df(t) = {\text{Document frequency of term } t \text{ in all documents} } \\<br>
-= \frac{\text{Number of documents with term  }t}{\text{Total number of documents i.e. }n}
-}
+\begin{aligned}
+df(t) \cr
+&amp;= {\text{Document frequency of term } t \text{ in all documents} } \cr
+&amp;= \frac{\text{Number of documents with term  }t}{\text{Total number of documents i.e. }n}
+\end{aligned}
 $$</p>
   <footer>
     <strong></strong>
@@ -565,16 +564,16 @@ $$</p>
 
 <blockquote>
   <p>$$
-\displaylines{
-tf(t, d_{n}) * idf(t) \\\\
-{\text{Which translates to every term as }} \\
-tf(t, d_{1}) * idf(t) \\
-tf(t, d_{2}) * idf(t) \\
-tf(t, d_{3}) * idf(t) \\
-tf(t, d_{4}) * idf(t) \\
-{\text{so on &hellip; till &hellip;}} \\
-tf(t, d_{n}) * idf(t) \\
-}
+\begin{aligned}
+&amp;tf(t, d_{n}) * idf(t) \cr\cr
+&amp;{\text{Which translates to every term as }} \cr
+&amp;tf(t, d_{1}) * idf(t) \cr
+&amp;tf(t, d_{2}) * idf(t) \cr
+&amp;tf(t, d_{3}) * idf(t) \cr
+&amp;tf(t, d_{4}) * idf(t) \cr
+&amp;{\text{so on &hellip; till &hellip;}} \cr
+&amp;tf(t, d_{n}) * idf(t) \cr
+\end{aligned}
 $$</p>
   <footer>
     <strong></strong>
@@ -622,61 +621,40 @@ $$</p>
 
 <blockquote>
   <p>$$
-\displaylines{
-tf(learning,d_{1}) \\<br>
-= \frac {\text{No. of times term learning occurs in } d_{1}} {\text{No. of words in }  d_{1} } \\<br>
-= \frac{3}{28} = 0.11
-}
-$$
-$$
-\displaylines{
-tf(learning,d_{2}) \\<br>
-= \frac {\text{No. of times term learning occurs in } d_{2}} {\text{No. of words in }  d_{2} } \\<br>
-= \frac{1}{30} = 0.03
-}
-$$
-$$
-\displaylines{
-tf(learning,d_{3}) \\<br>
-= \frac {\text{No. of times term learning occurs in } d_{3}} {\text{No. of words in }  d_{3} } \\<br>
-= \frac{0}{9} = 0
-}
-$$
-$$
-\displaylines{
-df(learning) \\<br>
-= \frac {\text{No. of documents with term learning}} {\text{No. of documents }} \\<br>
-= \frac{2}{3}<br>
-}
-$$
-$$
-\displaylines{
-idf(learning) \\<br>
-= log(\frac{1}{df(learning)}) \\<br>
-= log(\frac{3}{2}) \\<br>
-= log(1.5) = 0.176
-}
-$$
-$$
-\displaylines{
-tfidf(learning, d_{1}) \\<br>
-= tf(learning, d_{1}) * idf(learning) \\<br>
-= 0.11 * 0.176 = 0.01936
-}
-$$
-$$
-\displaylines{
-tfidf(learning, d_{2}) \\<br>
-= tf(learning, d_{2}) * idf(learning) \\<br>
-= 0.03 * 0.176 = 0.00528
-}
-$$
-$$
-\displaylines{
-tfidf(learning, d_{3}) \\<br>
-= tf(learning, d_{3}) * idf(learning) \\<br>
-= 0 * 0.176 = 0
-}
+\begin{aligned}
+tf(learning,d_{1}) \cr
+&amp;= \frac {\text{No. of times term learning occurs in } d_{1}} {\text{No. of words in }  d_{1} } \cr
+&amp;= \frac{3}{28} = 0.11 \cr
+\cr
+tf(learning,d_{2}) \cr
+&amp;= \frac {\text{No. of times term learning occurs in } d_{2}} {\text{No. of words in }  d_{2} } \cr
+&amp;= \frac{1}{30} = 0.03 \cr
+\cr
+tf(learning,d_{3}) \cr
+&amp;= \frac {\text{No. of times term learning occurs in } d_{3}} {\text{No. of words in }  d_{3} } \cr
+&amp;= \frac{0}{9} = 0 \cr
+\cr
+df(learning) \cr
+&amp;= \frac {\text{No. of documents with term learning}} {\text{No. of documents }} \cr
+&amp;= \frac{2}{3} \cr
+\cr
+idf(learning) \cr
+&amp;= log(\frac{1}{df(learning)}) \cr
+&amp;= log(\frac{3}{2}) \cr
+&amp;= log(1.5) = 0.176 \cr
+\cr
+tfidf(learning, d_{1}) \cr
+&amp;= tf(learning, d_{1}) * idf(learning) \cr
+&amp;= 0.11 * 0.176 = 0.01936 \cr
+\cr
+tfidf(learning, d_{2}) \cr
+&amp;= tf(learning, d_{2}) * idf(learning) \cr
+&amp;= 0.03 * 0.176 = 0.00528 \cr
+\cr
+tfidf(learning, d_{3}) \cr
+&amp;= tf(learning, d_{3}) * idf(learning) \cr
+&amp;= 0 * 0.176 = 0 \cr
+\end{aligned}
 $$</p>
   <footer>
     <strong></strong>
@@ -727,12 +705,13 @@ $$</p>
 
 <blockquote>
   <p>$$
-\displaylines{
-shards = max(\frac{\text{Write bandwidth in KB}}{1000},\frac{\text{Read bandwidth in KB}}{2000}) \\\\<br>
-Where,\\<br>
-\text{Write Bandwidth in KB} = \text{Average Record Size in KB} * \text{Records Per Second} \\<br>
-\text{Read Bandwidth in KB} = \text{Write Bandwidth in KB} * \text{Number of Consumers}
-}
+\begin{aligned}
+shards \cr
+&amp;= max(\frac{\text{Write bandwidth in KB}}{1000},\frac{\text{Read bandwidth in KB}}{2000}) \cr \cr
+Where,\cr
+&amp;\text{Write Bandwidth in KB} = \text{Average Record Size in KB} * \text{Records Per Second} \cr
+&amp;\text{Read Bandwidth in KB} = \text{Write Bandwidth in KB} * \text{Number of Consumers}
+\end{aligned}
 $$</p>
   <footer>
     <strong></strong>
@@ -785,32 +764,32 @@ $$</p>
 
 <blockquote>
   <p>$$
-120 \text{ RPM} = \frac{120}{60} = 2 \text{ RPS} \\<br>
+120 \text{ RPM} = \frac{120}{60} = 2 \text{ RPS}
 $$
 $$
-\displaylines{
-\text{Write Bandwidth in KB} \\<br>
-= \text{Average Record Size in KB} * \text{Records Per Second} \\<br>
-= 500 * 2 \\<br>
-= 1000 KB
-}
+\begin{aligned}
+\text{Write Bandwidth in KB} \cr
+&amp;= \text{Average Record Size in KB} * \text{Records Per Second} \cr
+&amp;= 500 * 2 \cr
+&amp;= 1000 KB
+\end{aligned}
 $$
 $$
-\displaylines{
-\text{Read Bandwidth in KB}  \\<br>
-= \text{Write Bandwidth in KB} * \text{Number of Consumers} \\<br>
-= 1000 * 7 \\<br>
-= 7000 KB
-}
+\begin{aligned}
+\text{Read Bandwidth in KB}  \cr
+&amp;= \text{Write Bandwidth in KB} * \text{Number of Consumers} \cr
+&amp;= 1000 * 7 \cr
+&amp;= 7000 KB
+\end{aligned}
 $$
 $$
-\displaylines{
-shards \\<br>
-= max(\frac{\text{Write bandwidth in KB}}{1000},\frac{\text{Read bandwidth in KB}}{2000}) \\<br>
-= max(\frac{1000}{1000},\frac{7000}{2000}) \\<br>
-= max(1, 3.5)
-= 3.5 \approx 4
-}
+\begin{aligned}
+shards \cr
+&amp;= max(\frac{\text{Write bandwidth in KB}}{1000},\frac{\text{Read bandwidth in KB}}{2000}) \cr
+&amp;= max(\frac{1000}{1000},\frac{7000}{2000}) \cr
+&amp;= max(1, 3.5) \cr
+&amp;= 3.5 \approx 4
+\end{aligned}
 $$</p>
   <footer>
     <strong></strong>
