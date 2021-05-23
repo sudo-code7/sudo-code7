@@ -14,7 +14,7 @@
 
 
 <meta name="keywords" content="machine, learning, sagemaker, aws, mls-c01, specialty, exam, deep, learning, training, math, formula, formulae, exercise, problem, questions, numerical, solved" />
-<meta name="description" content="Cheatsheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam">
+<meta name="description" content="Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam">
 <meta name="author" content="sudo-code">
 <link rel="canonical" href="https://sudo-code7.github.io/posts/tech/ml/mls-c01/formulae-reference/" />
 <link href="https://sudo-code7.github.io/assets/css/stylesheet.min.a87fc24c001e605668fd05350af283312a031122beac837fe335db0cb25317bd.css" integrity="sha256-qH/CTAAeYFZo/QU1CvKDMSoDESK&#43;rIN/4zXbDLJTF70=" rel="preload stylesheet"
@@ -27,7 +27,7 @@
 <link rel="mask-icon" href="https://sudo-code7.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -53,7 +53,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 <meta property="og:title" content="AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!" />
-<meta property="og:description" content="Cheatsheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam" />
+<meta property="og:description" content="Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://sudo-code7.github.io/posts/tech/ml/mls-c01/formulae-reference/" />
 <meta property="og:image" content="https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png" /><meta property="article:published_time" content="2021-03-19T11:30:03+00:00" />
@@ -61,7 +61,7 @@ if (!doNotTrack) {
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png" />
 <meta name="twitter:title" content="AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!"/>
-<meta name="twitter:description" content="Cheatsheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam"/>
+<meta name="twitter:description" content="Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam"/>
 
 <script type="application/ld+json">
 {
@@ -73,8 +73,8 @@ if (!doNotTrack) {
   "keywords": [
     "machine", "learning", "sagemaker", "aws", "mls-c01", "specialty", "exam", "deep", "learning", "training", "math", "formula", "formulae", "exercise", "problem", "questions", "numerical", "solved"
   ],
-  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped Write down both versions of confusion matrix in a rough sheet provided as soon as you start exam  Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = Positive Prediction Value (PPV) = \\frac{TP}{TP+FP} $$ $$ Recall = Sensitivity = True Positive Rate (TPR) = \\frac{TP}{TP+FN} $$ $$ Specificity = True Negative Rate (TNR) = \\frac{TN}{TN+FP} $$\n     Sudo Exam Tip:\n How to remember above formulae ?  After having understood what above formulae mean, only way to quickly reproduce is to have some sort of recall :) from your memory, here is a trick, the way I remember:  Precision:  Precision formula has all components ending with P i.e. Precision = TP/(TP+FP)   Recall:  Once you know Precision, for Recall just replace the FP - FN, that’s all!   Specificity  Once you know Precision, for Specificity just replace the TP - TN, that’s all!            F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} $$\n    Sample Question and Solution TF-IDF: Term Frequency - Inverse Document Frequency  In information retrieval, tf–idf, TF*IDF, or TFIDF, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus  tf–idf is one of the most popular term-weighting schemes today Read more on [Wikipedia]{https://en.wikipedia.org/wiki/Tf%E2%80%93idf}   Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ \\begin{aligned} tf(t, d_{n}) \\cr \u0026= {\\text{Term frequency of term } t \\text{ in } document_{n} } \\cr \u0026= \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\cr \\end{aligned} $$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ \\begin{aligned} df(t) \\cr \u0026= {\\text{Document frequency of term } t \\text{ in all documents} } \\cr \u0026= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} \\end{aligned} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = log(\\frac{1}{df(t)}) $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ \\begin{aligned} \u0026tf(t, d_{n}) * idf(t) \\cr\\cr \u0026{\\text{Which translates to every term as }} \\cr \u0026tf(t, d_{1}) * idf(t) \\cr \u0026tf(t, d_{2}) * idf(t) \\cr \u0026tf(t, d_{3}) * idf(t) \\cr \u0026tf(t, d_{4}) * idf(t) \\cr \u0026{\\text{so on … till …}} \\cr \u0026tf(t, d_{n}) * idf(t) \\cr \\end{aligned} $$\n    TF-IDF Exercise  TF-IDF tells us the significance of a term in a document Let’s consider few documents:  Document 1 - d1: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The learning experience is very good. Machine learning specialty preparation is made easy Document 2 - d2: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The blogs are very informative and to the point. The blogs take a new approach Document 3 - d3: Sudo Code blogs are very helpful for MLS-C01 exam   The question we ask is: How significant is the term learning in all documents The answer is to calculate TF-IDF  Sample Question and Solution  $$ \\begin{aligned} tf(learning,d_{1}) \\cr \u0026= \\frac {\\text{No. of times term learning occurs in } d_{1}} {\\text{No. of words in } d_{1} } \\cr \u0026= \\frac{3}{28} = 0.11 \\cr \\cr tf(learning,d_{2}) \\cr \u0026= \\frac {\\text{No. of times term learning occurs in } d_{2}} {\\text{No. of words in } d_{2} } \\cr \u0026= \\frac{1}{30} = 0.03 \\cr \\cr tf(learning,d_{3}) \\cr \u0026= \\frac {\\text{No. of times term learning occurs in } d_{3}} {\\text{No. of words in } d_{3} } \\cr \u0026= \\frac{0}{9} = 0 \\cr \\cr df(learning) \\cr \u0026= \\frac {\\text{No. of documents with term learning}} {\\text{No. of documents }} \\cr \u0026= \\frac{2}{3} \\cr \\cr idf(learning) \\cr \u0026= log(\\frac{1}{df(learning)}) \\cr \u0026= log(\\frac{3}{2}) \\cr \u0026= log(1.5) = 0.176 \\cr \\cr tfidf(learning, d_{1}) \\cr \u0026= tf(learning, d_{1}) * idf(learning) \\cr \u0026= 0.11 * 0.176 = 0.01936 \\cr \\cr tfidf(learning, d_{2}) \\cr \u0026= tf(learning, d_{2}) * idf(learning) \\cr \u0026= 0.03 * 0.176 = 0.00528 \\cr \\cr tfidf(learning, d_{3}) \\cr \u0026= tf(learning, d_{3}) * idf(learning) \\cr \u0026= 0 * 0.176 = 0 \\cr \\end{aligned} $$\n    Interpretation of TF-IDF Values  tf-idf of term learning is largest for document 1, hence the term is more significant in document 1 with weight 0.0193 The next document is document 2 with weight 0.0058 document 3 has no significance with weight 0  Kinesis Shards Calculation  Number of shards required for a Kinesis stream is a precisely calculation based on:  Record size Write Bandwidth (into kinesis stream) Read Bandwidth (out of kinesis stream)   The number of shards = shards is calculated as   $$ \\begin{aligned} shards \\cr \u0026= max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\cr \\cr Where,\\cr \u0026\\text{Write Bandwidth in KB} = \\text{Average Record Size in KB} * \\text{Records Per Second} \\cr \u0026\\text{Read Bandwidth in KB} = \\text{Write Bandwidth in KB} * \\text{Number of Consumers} \\end{aligned} $$\n     Reference: Read this FAQ on Kinesis Data Streams  Search for question How do I decide the throughput of my Kinesis stream?    Kinesis shard calculation example  You are designing a system where Kinesis data streams are to be used for realtime processing of data produced by IoT systems The average record size produced by IoT devices are 500KB in size The data records are written to Kinesis stream by IoT devices using PutRecord API directly at a rate of 120 records per minute There are 7 Lambda instances that will read from the Kinesis stream and process the data, and finally store them to DynamoDB How many shards will the Kinesis stream need to support the above described system ?  Solution  Remember to convert RPM Records Per Minute to RPS Records Per Second   $$ 120 \\text{ RPM} = \\frac{120}{60} = 2 \\text{ RPS} $$ $$ \\begin{aligned} \\text{Write Bandwidth in KB} \\cr \u0026= \\text{Average Record Size in KB} * \\text{Records Per Second} \\cr \u0026= 500 * 2 \\cr \u0026= 1000 KB \\end{aligned} $$ $$ \\begin{aligned} \\text{Read Bandwidth in KB} \\cr \u0026= \\text{Write Bandwidth in KB} * \\text{Number of Consumers} \\cr \u0026= 1000 * 7 \\cr \u0026= 7000 KB \\end{aligned} $$ $$ \\begin{aligned} shards \\cr \u0026= max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\cr \u0026= max(\\frac{1000}{1000},\\frac{7000}{2000}) \\cr \u0026= max(1, 3.5) \\cr \u0026= 3.5 \\approx 4 \\end{aligned} $$\n    Answer  As number of shards cannot be a fraction, round up to the next integer i.e 4 shards are needed to support the demands of the system  ",
-  "wordCount" : "1108",
+  "articleBody": "Formulae Cheat Sheet to Prepare for Machine Learning Specialty Remember how to write Confusion Matrix  Know how to write confusion matrix when Actual and Predicted are swapped Write down both versions of confusion matrix in a rough sheet provided as soon as you start exam  Basic Formulae for Classification Precision, Recall and Specificity  $$ Precision = Positive Prediction Value (PPV) = \\frac{TP}{TP+FP} $$ $$ Recall = Sensitivity = True Positive Rate (TPR) = \\frac{TP}{TP+FN} $$ $$ Specificity = True Negative Rate (TNR) = \\frac{TN}{TN+FP} $$\n     Sudo Exam Tip:\n How to remember above formulae ?  After having understood what above formulae mean, only way to quickly reproduce is to have some sort of recall :) from your memory, here is a trick, the way I remember:  Precision:  Precision formula has all components ending with P i.e. Precision = TP/(TP+FP)   Recall:  Once you know Precision, for Recall just replace the FP - FN, that’s all!   Specificity  Once you know Precision, for Specificity just replace the TP - TN, that’s all!            F1-Score  $$ F1 = \\underbrace{\\frac{2 * TP}{2*TP + FP + FN}}_{\\text{In terms of TP, FP and FN}} $$\n$$ F1 = \\underbrace{\\frac{2 * Precision * Recall}{Precision + Recall}}_{\\text{In terms Precision and Recall}} $$\n    Sample Question and Solution TF-IDF: Term Frequency - Inverse Document Frequency  In information retrieval, tf–idf, TF*IDF, or TFIDF, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus  tf–idf is one of the most popular term-weighting schemes today Read more on [Wikipedia]{https://en.wikipedia.org/wiki/Tf%E2%80%93idf}   Term frequency (tf) of a term is calculated over all n documents. If tf is to be calculated on many terms, the process is repeated again on all n documents   $$ \\begin{aligned} tf(t, d_{n}) \\cr \u0026= {\\text{Term frequency of term } t \\text{ in } document_{n} } \\cr \u0026= \\frac{\\text{Number of times }t\\text{ occurs in } d_{n}}{\\text{Number of words in }d_{n}} \\cr \\end{aligned} $$\n     Document frequency (df) of a term is calculated only once over all n documents   $$ \\begin{aligned} df(t) \\cr \u0026= {\\text{Document frequency of term } t \\text{ in all documents} } \\cr \u0026= \\frac{\\text{Number of documents with term }t}{\\text{Total number of documents i.e. }n} \\end{aligned} $$\n     Inverse document frequency idf is simply inverse of df   $$ idf(t) = log(\\frac{1}{df(t)}) $$\n     Finally tf-idf is calculated for every term using tf and idf   $$ \\begin{aligned} \u0026tf(t, d_{n}) * idf(t) \\cr\\cr \u0026{\\text{Which translates to every term as }} \\cr \u0026tf(t, d_{1}) * idf(t) \\cr \u0026tf(t, d_{2}) * idf(t) \\cr \u0026tf(t, d_{3}) * idf(t) \\cr \u0026tf(t, d_{4}) * idf(t) \\cr \u0026{\\text{so on … till …}} \\cr \u0026tf(t, d_{n}) * idf(t) \\cr \\end{aligned} $$\n    TF-IDF Exercise  TF-IDF tells us the significance of a term in a document Let’s consider few documents:  Document 1 - d1: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The learning experience is very good. Machine learning specialty preparation is made easy Document 2 - d2: Sudo Code blogs are a very good resource to prepare for machine learning specialty exam. The blogs are very informative and to the point. The blogs take a new approach Document 3 - d3: Sudo Code blogs are very helpful for MLS-C01 exam   The question we ask is: How significant is the term learning in all documents The answer is to calculate TF-IDF  Sample Question and Solution  $$ \\begin{aligned} tf(learning,d_{1}) \\cr \u0026= \\frac {\\text{No. of times term learning occurs in } d_{1}} {\\text{No. of words in } d_{1} } \\cr \u0026= \\frac{3}{28} = 0.11 \\cr \\cr tf(learning,d_{2}) \\cr \u0026= \\frac {\\text{No. of times term learning occurs in } d_{2}} {\\text{No. of words in } d_{2} } \\cr \u0026= \\frac{1}{30} = 0.03 \\cr \\cr tf(learning,d_{3}) \\cr \u0026= \\frac {\\text{No. of times term learning occurs in } d_{3}} {\\text{No. of words in } d_{3} } \\cr \u0026= \\frac{0}{9} = 0 \\cr \\cr df(learning) \\cr \u0026= \\frac {\\text{No. of documents with term learning}} {\\text{No. of documents }} \\cr \u0026= \\frac{2}{3} \\cr \\cr idf(learning) \\cr \u0026= log(\\frac{1}{df(learning)}) \\cr \u0026= log(\\frac{3}{2}) \\cr \u0026= log(1.5) = 0.176 \\cr \\cr tfidf(learning, d_{1}) \\cr \u0026= tf(learning, d_{1}) * idf(learning) \\cr \u0026= 0.11 * 0.176 = 0.01936 \\cr \\cr tfidf(learning, d_{2}) \\cr \u0026= tf(learning, d_{2}) * idf(learning) \\cr \u0026= 0.03 * 0.176 = 0.00528 \\cr \\cr tfidf(learning, d_{3}) \\cr \u0026= tf(learning, d_{3}) * idf(learning) \\cr \u0026= 0 * 0.176 = 0 \\cr \\end{aligned} $$\n    Interpretation of TF-IDF Values  tf-idf of term learning is largest for document 1, hence the term is more significant in document 1 with weight 0.0193 The next document is document 2 with weight 0.0058 document 3 has no significance with weight 0  Kinesis Shards Calculation  Number of shards required for a Kinesis stream is a precisely calculation based on:  Record size Write Bandwidth (into kinesis stream) Read Bandwidth (out of kinesis stream)   The number of shards = shards is calculated as   $$ \\begin{aligned} shards \\cr \u0026= max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\cr \\cr Where,\\cr \u0026\\text{Write Bandwidth in KB} = \\text{Average Record Size in KB} * \\text{Records Per Second} \\cr \u0026\\text{Read Bandwidth in KB} = \\text{Write Bandwidth in KB} * \\text{Number of Consumers} \\end{aligned} $$\n     Reference: Read this FAQ on Kinesis Data Streams  Search for question How do I decide the throughput of my Kinesis stream?    Kinesis shard calculation example  You are designing a system where Kinesis data streams are to be used for realtime processing of data produced by IoT systems The average record size produced by IoT devices are 500KB in size The data records are written to Kinesis stream by IoT devices using PutRecord API directly at a rate of 120 records per minute There are 7 Lambda instances that will read from the Kinesis stream and process the data, and finally store them to DynamoDB How many shards will the Kinesis stream need to support the above described system ?  Solution  Remember to convert RPM Records Per Minute to RPS Records Per Second   $$ 120 \\text{ RPM} = \\frac{120}{60} = 2 \\text{ RPS} $$ $$ \\begin{aligned} \\text{Write Bandwidth in KB} \\cr \u0026= \\text{Average Record Size in KB} * \\text{Records Per Second} \\cr \u0026= 500 * 2 \\cr \u0026= 1000 KB \\end{aligned} $$ $$ \\begin{aligned} \\text{Read Bandwidth in KB} \\cr \u0026= \\text{Write Bandwidth in KB} * \\text{Number of Consumers} \\cr \u0026= 1000 * 7 \\cr \u0026= 7000 KB \\end{aligned} $$ $$ \\begin{aligned} shards \\cr \u0026= max(\\frac{\\text{Write bandwidth in KB}}{1000},\\frac{\\text{Read bandwidth in KB}}{2000}) \\cr \u0026= max(\\frac{1000}{1000},\\frac{7000}{2000}) \\cr \u0026= max(1, 3.5) \\cr \u0026= 3.5 \\approx 4 \\end{aligned} $$\n    Answer  As number of shards cannot be a fraction, round up to the next integer i.e 4 shards are needed to support the demands of the system  Autoscaling Sagemaker  The production variants of your model need to be autoscaled to handle fluctuation in traffic Perform load testing to find the peak SageMakerVariantInvocationsPerInstance that your model’s production variant can handle The recommended SAFETY_FACTOR is 0.5 to start with, as per AWS Refer here for a detailed AWS blog on fine tuning sagemaker.  If RPS is used:  $$ \\begin{aligned} SageMakerVariantInvocationsPerInstance = MAXRPS * SAFETYFACTOR * 60 \\end{aligned} $$\n    If RPM is used:  $$ \\begin{aligned} SageMakerVariantInvocationsPerInstance = MAXRPM * SAFETYFACTOR \\end{aligned} $$\n     Where MAX_RPS is the maximum RPS that you determined from load test, and SAFETY_FACTOR is the safety factor that you chose to ensure that your clients don’t exceed the maximum RPS. Same holds for MAX_RPM   Sudo Exam Tip: SageMakerVariantInvocationsPerInstance is the average number of times per minute that each instance for a variant is invoked. The Gist! - Final configuration provided to Sagemaker for SageMakerVariantInvocationsPerInstance should be in terms of RPM\n    Exercise Question: When load testing results are in RPS A Machine Learning Specialist wants to determine the appropriate SageMaker Variant Invocations Per Instance setting for an endpoint automatic scaling configuration. The Specialist has performed a load test on a single instance and determined that peak requests per second (RPS) without service degradation is about 20 RPS. As this is the first deployment, the Specialist intends to set the invocation safety factor to 0.5 Based on the stated parameters and given that the invocations per instance setting is measured on a per-minute basis, what should the Specialist set as the SageMakerVariantInvocationsPerInstance setting?\nSolution  $$ \\begin{aligned} SageMakerVariantInvocationsPerInstance \\cr \u0026= MAXRPS * SAFETYFACTOR * 60 \\cr \u0026= 20 * 0.5 * 60 \\cr \u0026= 10 * 60 = 600 \\cr \\end{aligned} $$\n    Exercise Question: When load testing results are in RPM A Machine Learning Specialist has performed a load test on a single instance and determined that peak requests per minute (RPM) without service degradation is about 1400 RPM. The Specialist intends to set the invocation safety factor to 0.7 What should the Specialist set as the SageMakerVariantInvocationsPerInstance setting?\nSolution  $$ \\begin{aligned} SageMakerVariantInvocationsPerInstance \\cr \u0026= MAXRPM * SAFETYFACTOR \\cr \u0026= 1400 * 0.7 \\cr \u0026= 980 \\cr \\end{aligned} $$\n    ",
+  "wordCount" : "1467",
   "inLanguage": "en",
   "image":"https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png","datePublished": "2021-03-19T11:30:03Z",
   "dateModified": "2021-03-19T11:30:03Z",
@@ -112,7 +112,7 @@ if (!doNotTrack) {
     "articleSection" : "posts",
     "name" : "AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!",
     "headline" : "AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!",
-    "description" : "Cheatsheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam",
+    "description" : "Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam",
     "inLanguage" : "en-US",
     "author" : {
         "@type": "Person",
@@ -142,7 +142,7 @@ if (!doNotTrack) {
     "datePublished": "2021-03-19 11:30:03 \u002b0000 \u002b0000",
     "dateModified" : "2021-03-19 11:30:03 \u002b0000 \u002b0000",
     "url" : "https:\/\/sudo-code7.github.io\/posts\/tech\/ml\/mls-c01\/formulae-reference\/",
-    "wordCount" : "1108",
+    "wordCount" : "1467",
     "keywords" : [ "machine","learning","sagemaker","aws","mls-c01","specialty","exam","deep","learning","training","math","formula","formulae","exercise","problem","questions","numerical","solved","Blog" ],
     "image": "https://sudo-code7.github.io/mls-c01/assets/images/exam-formulae/formulae-mls-c01.png"
 }
@@ -231,11 +231,11 @@ if (!doNotTrack) {
       AWS Machine Learning Specialty: Know These Math Formulae Before Exam with Solved Numerical Questions!
     </h1>
     <div class="post-description">
-      Cheatsheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam
+      Cheat sheet of formulae to revise just before AWS Machine Learning Specialty MLS-C01 Exam
     </div>
     <div class="post-meta">
 
-March 19, 2021&nbsp;·&nbsp;6 min&nbsp;·&nbsp;sudo-code
+March 19, 2021&nbsp;·&nbsp;7 min&nbsp;·&nbsp;sudo-code
 
     </div>
   </header> 
@@ -267,6 +267,19 @@ March 19, 2021&nbsp;·&nbsp;6 min&nbsp;·&nbsp;sudo-code
             <li>
         <a href="#solution" aria-label="Solution">Solution</a></li><li>
         <a href="#answer" aria-label="Answer">Answer</a></li></ul>
+    </li></ul>
+    </li><li>
+        <a href="#autoscaling-sagemaker" aria-label="Autoscaling Sagemaker">Autoscaling Sagemaker</a><ul>
+            <li>
+        <a href="#if-rps-is-used" aria-label="If RPS is used:">If RPS is used:</a></li><li>
+        <a href="#if-rpm-is-used" aria-label="If RPM is used:">If RPM is used:</a></li><li>
+        <a href="#exercise-question-when-load-testing-results-are-in-rps" aria-label="Exercise Question: When load testing results are in RPS">Exercise Question: When load testing results are in RPS</a><ul>
+            <li>
+        <a href="#solution-1" aria-label="Solution">Solution</a></li></ul>
+    </li><li>
+        <a href="#exercise-question-when-load-testing-results-are-in-rpm" aria-label="Exercise Question: When load testing results are in RPM">Exercise Question: When load testing results are in RPM</a><ul>
+            <li>
+        <a href="#solution-2" aria-label="Solution">Solution</a></li></ul>
 </li></ul>
 </li></ul>
 </li></ul>
@@ -398,7 +411,7 @@ $$ Specificity = True Negative Rate (TNR) = \frac{TN}{TN+FP} $$</p>
 
 
 <blockquote>
-  <p><p>$$ F1 = \underbrace{\frac{2 * TP}{TP + FP + FN}}_{\text{In terms of TP, FP and FN}}  $$</p>
+  <p><p>$$ F1 = \underbrace{\frac{2 * TP}{2*TP + FP + FN}}_{\text{In terms of TP, FP and FN}}  $$</p>
 <p>$$ F1 = \underbrace{\frac{2 * Precision * Recall}{Precision + Recall}}_{\text{In terms Precision and Recall}}  $$</p>
 </p>
   <footer>
@@ -805,6 +818,209 @@ $$</p>
 <ul>
 <li>As number of <code>shards</code> cannot be a fraction, round up to the next integer i.e <code>4 shards</code> are needed to support the demands of the system</li>
 </ul>
+<h2 id="autoscaling-sagemaker">Autoscaling Sagemaker<a hidden class="anchor" aria-hidden="true" href="#autoscaling-sagemaker">#</a></h2>
+<ul>
+<li>The production variants of your model need to be autoscaled to handle fluctuation in traffic</li>
+<li>Perform load testing to find the peak <code>SageMakerVariantInvocationsPerInstance</code> that your model&rsquo;s production variant can handle</li>
+<li>The recommended <code>SAFETY_FACTOR</code> is 0.5 to start with, as per AWS</li>
+<li>Refer <a href="https://aws.amazon.com/blogs/machine-learning/load-test-and-optimize-an-amazon-sagemaker-endpoint-using-automatic-scaling/">here</a> for a detailed AWS blog on fine tuning sagemaker.</li>
+</ul>
+<h3 id="if-rps-is-used">If RPS is used:<a hidden class="anchor" aria-hidden="true" href="#if-rps-is-used">#</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
+\begin{aligned}
+SageMakerVariantInvocationsPerInstance = MAXRPS * SAFETYFACTOR * 60
+\end{aligned}
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<h3 id="if-rpm-is-used">If RPM is used:<a hidden class="anchor" aria-hidden="true" href="#if-rpm-is-used">#</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
+\begin{aligned}
+SageMakerVariantInvocationsPerInstance = MAXRPM * SAFETYFACTOR
+\end{aligned}
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<ul>
+<li>Where MAX_RPS is the maximum RPS that you determined from load test, and <code>SAFETY_FACTOR</code> is the safety factor that you chose to ensure that your clients don&rsquo;t exceed the maximum RPS. Same holds for MAX_RPM</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p><strong>Sudo Exam Tip:</strong>
+<code>SageMakerVariantInvocationsPerInstance</code> is the average number of times <code>per minute</code> that each instance for a variant is invoked.
+The Gist! - Final configuration provided to Sagemaker for <code>SageMakerVariantInvocationsPerInstance</code> should be in terms of RPM</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<h3 id="exercise-question-when-load-testing-results-are-in-rps">Exercise Question: When load testing results are in RPS<a hidden class="anchor" aria-hidden="true" href="#exercise-question-when-load-testing-results-are-in-rps">#</a></h3>
+<p>A Machine Learning Specialist wants to determine the appropriate SageMaker Variant Invocations Per Instance setting for an endpoint automatic scaling configuration. The Specialist has performed a load test on a single instance and determined that peak requests per second (RPS) without service degradation is about 20 RPS. As this is the first deployment, the Specialist intends to set the invocation safety factor to 0.5 Based on the stated parameters and given that the invocations per instance setting is measured on a per-minute basis, what should the Specialist set as the <code>SageMakerVariantInvocationsPerInstance</code> setting?</p>
+<h4 id="solution-1">Solution<a hidden class="anchor" aria-hidden="true" href="#solution-1">#</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
+\begin{aligned}
+SageMakerVariantInvocationsPerInstance \cr
+&amp;= MAXRPS * SAFETYFACTOR * 60 \cr
+&amp;= 20 * 0.5 * 60 \cr
+&amp;= 10 * 60 = 600 \cr
+\end{aligned}
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
+<h3 id="exercise-question-when-load-testing-results-are-in-rpm">Exercise Question: When load testing results are in RPM<a hidden class="anchor" aria-hidden="true" href="#exercise-question-when-load-testing-results-are-in-rpm">#</a></h3>
+<p>A Machine Learning Specialist has performed a load test on a single instance and determined that peak requests per minute (RPM) without service degradation is about 1400 RPM. The Specialist intends to set the invocation safety factor to 0.7
+What should the Specialist set as the <code>SageMakerVariantInvocationsPerInstance</code> setting?</p>
+<h4 id="solution-2">Solution<a hidden class="anchor" aria-hidden="true" href="#solution-2">#</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<blockquote>
+  <p>$$
+\begin{aligned}
+SageMakerVariantInvocationsPerInstance \cr
+&amp;= MAXRPM * SAFETYFACTOR \cr
+&amp;= 1400 * 0.7 \cr
+&amp;= 980 \cr
+\end{aligned}
+$$</p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
+</blockquote>
+
 
 </div>
   <footer class="post-footer">

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate><atom:link href="https://sudo-code7.github.io/tags/compared/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>All Four Amazon Kinesis Streams Compared - Kinesis Data Stream vs Data Analytics Stream vs Firehose vs Video Stream</title>
+      <title>Amazon Kinesis Streams Compared</title>
       <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-kinesis-compare/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
@@ -16,7 +16,7 @@
     </item>
     
     <item>
-      <title>Amazon Sagemaker Built-in Algorithms - Details compared for Machine Learning Specialty</title>
+      <title>Amazon Sagemaker Built-in Algorithms Compared</title>
       <link>https://sudo-code7.github.io/posts/tech/ml/mls-c01/ai-ml-mls-c01/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
